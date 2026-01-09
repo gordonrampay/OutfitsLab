@@ -1,4 +1,5 @@
  HEAD
+
 # OutfitsLab
 
 ### **2.1. Mục tiêu xây dựng hệ thống**
@@ -47,7 +48,6 @@ Phạm vi của hệ thống trong khuôn khổ dự án bao gồm:
 * Hỗ trợ các chức năng cơ bản phục vụ thử đồ, tìm kiếm và quản lý người dùng.
 * Chưa tích hợp trực tiếp chức năng thanh toán online, chỉ hỗ trợ chuyển hướng tới gian hàng bán sản phẩm.
 
-
 2. Đối tượng & vai trò (Actors)
    • Guest (khách vãng lai): xem sản phẩm, thử demo 3D hạn chế, xem biểu đồ chung (ẩn chi tiết).
    • User (đã đăng ký): đầy đủ tính năng thử 3D, lưu mst, đồng bộ thiết bị.
@@ -86,24 +86,16 @@ Phạm vi của hệ thống trong khuôn khổ dự án bao gồm:
    • Tổng hợp & hiển thị biểu đồ: Top items, Top categories, tương tác theo thời gian, heatmap.
    • Xuất báo cáo (CSV/PDF), đặt lịch gửi email.
 
-5. PHÂN TÍCH & THIẾT KẾ HỆ THỐNG
 
-*(System Analysis & Design)*
 
-##1. Phân tích hệ thống (System Analysis)
-
-###1.1 Mục tiêu hệ thống
-=======
 # PHÂN TÍCH & THIẾT KẾ HỆ THỐNG
 
-*(System Analysis & Design)*
+## 5. Phân tích hệ thống (System Analysis)
 
-## 1. Phân tích hệ thống (System Analysis)
+### 5.1 Mục tiêu hệ thống
 
-### 1.1 Mục tiêu hệ thống
- 279b517 (Add pttkht.md file)
+ Xây dựng hệ thống **phòng thử đồ 3D trên nền web** kết hợp **thương mại điện tử**
 
-* Xây dựng hệ thống **phòng thử đồ 3D trên nền web** kết hợp **thương mại điện tử**
 * Cho phép người dùng:
   * Thử quần áo 3D trên avatar cá nhân
   * Tuỳ chỉnh màu sắc, logo, text
@@ -112,7 +104,7 @@ Phạm vi của hệ thống trong khuôn khổ dự án bao gồm:
 
 ---
 
-### 1.2 Đối tượng sử dụng hệ thống
+### 5.2 Đối tượng sử dụng hệ thống
 
 * **Khách hàng (User)**
   * Xem catalog sản phẩm
@@ -126,7 +118,7 @@ Phạm vi của hệ thống trong khuôn khổ dự án bao gồm:
 
 ---
 
-### 1.3 Phạm vi hệ thống
+### 5.3 Phạm vi hệ thống
 
 * Hệ thống chạy trên nền **Web**
 * Bao gồm:
@@ -137,7 +129,7 @@ Phạm vi của hệ thống trong khuôn khổ dự án bao gồm:
 
 ---
 
-### 1.4 Yêu cầu chức năng (Functional Requirements)
+### 5.4 Yêu cầu chức năng (Functional Requirements)
 
 #### Đối với người dùng
 
@@ -158,7 +150,7 @@ Phạm vi của hệ thống trong khuôn khổ dự án bao gồm:
 
 ---
 
-### 1.5 Yêu cầu phi chức năng (Non-Functional Requirements)
+### 5.5 Yêu cầu phi chức năng (Non-Functional Requirements)
 
 * **Hiệu năng:** Load 3D mượt, tối ưu model
 * **Bảo mật:** JWT, không lưu thông tin thẻ
