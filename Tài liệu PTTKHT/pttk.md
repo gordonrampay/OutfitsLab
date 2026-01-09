@@ -1,3 +1,4 @@
+ HEAD
 # OutfitsLab
 
 ### **2.1. Mục tiêu xây dựng hệ thống**
@@ -89,9 +90,18 @@ Phạm vi của hệ thống trong khuôn khổ dự án bao gồm:
 
 *(System Analysis & Design)*
 
-1. Phân tích hệ thống (System Analysis)
+##1. Phân tích hệ thống (System Analysis)
 
-1.1 Mục tiêu hệ thống
+###1.1 Mục tiêu hệ thống
+=======
+# PHÂN TÍCH & THIẾT KẾ HỆ THỐNG
+
+*(System Analysis & Design)*
+
+## 1. Phân tích hệ thống (System Analysis)
+
+### 1.1 Mục tiêu hệ thống
+ 279b517 (Add pttkht.md file)
 
 * Xây dựng hệ thống **phòng thử đồ 3D trên nền web** kết hợp **thương mại điện tử**
 * Cho phép người dùng:
