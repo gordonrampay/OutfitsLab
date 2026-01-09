@@ -1,11 +1,11 @@
 # OutfitsLab
 3) Chức năng & Use Cases
 3.1 Thử nghiệm các mẫu quần áo 3D
-• UC-01: User chọn item 3D từ catalog → hệ thống render lên avatar (chọn avatar chuẩn hoặc tạo avatar theo số đo: height, chest, waist, hip, etc.).
-• UC-02: Tùy chỉnh (màu, size, material preset), xoay/zoom, chụp ảnh snapshot.
-• UC-03: Lưu phiên thử (ảnh render + metadata) vào hồ sơ.
-• UC-04: Download/Share snapshot (tùy chính sách & watermarks).
-• UC-05: Gợi ý size dựa trên số đo/AI (size recommendation).
+• User chọn item 3D từ catalog → hệ thống render lên avatar (chọn avatar chuẩn hoặc tạo avatar theo số đo: height, chest, waist, hip, etc.).
+• Tùy chỉnh (màu, size, material preset), xoay/zoom, chụp ảnh snapshot.
+• Lưu phiên thử (ảnh render + metadata) vào hồ sơ.
+• Download/Share snapshot (tùy chính sách & watermarks).
+• Gợi ý size dựa trên số đo/AI (size recommendation).
 3.2 Lưu trữ các mẫu thử nghiệm
 • Lưu mô hình 3D (GLB/FBX/OBJ) theo item, phiên bản, vật liệu (PBR).
 • Lưu phiên thử: avatar config + item config + render snapshot + thời gian.
