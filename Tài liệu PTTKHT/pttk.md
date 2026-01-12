@@ -130,11 +130,7 @@ Phạm vi của hệ thống trong khuôn khổ dự án bao gồm:
 * Phát triển website hoạt động trên nền tảng trình duyệt web.
 * Áp dụng công nghệ 3D để mô phỏng trang phục, chưa đi sâu vào mô phỏng vật lý chi tiết (vải, chuyển động phức tạp).
 * Hỗ trợ các chức năng cơ bản phục vụ thử đồ, tìm kiếm và quản lý người dùng.
-* Chưa tích hợp trực tiếp chức năng thanh toán online, chỉ hỗ trợ chuyển hướng tới gian hàng bán sản phẩm.
-
-<<<<<<< HEAD
-
-* =======
+* Chưa tích hợp trực tiếp chức năng thanh toán online, chỉ hỗ trợ chuyển hướng tới gian hàng bán sản phẩm
 
 2. Đối tượng & vai trò (Actors)
    • Guest (khách vãng lai): xem sản phẩm, thử demo 3D hạn chế, xem biểu đồ chung (ẩn chi tiết).
@@ -143,12 +139,54 @@ Phạm vi của hệ thống trong khuôn khổ dự án bao gồm:
    • Integration Partner: đối tác bán hàng/e-commerce; cấp API key & định dạng dữ liệu.
    • Analytics/BI: hệ thống thu thập sự kiện, tổng hợp & vẽ biểu đồ.
 
+<<<<<<< HEAD
+
+# 3. Các biểu đồ phân tích thiết kế hệ thống
+
+=======
 
 # 3. Các biểu đồ phân tích thiết kế hệ thống
 
 ## 3.1. Các biểu đồ Usecase chung của hệ thống
 
 ## 3.2. Các biểu đồ Usecase chức năng của admin
+
+## 3.3. Các biểu đồ Usecase chức năng của user
+
+### 3.3.1. Biểu đồ Usecase tổng quát
+
+    `<img src="/images/UC_TongQuat.png">`
+
+### 3.3.2. Biểu đồ Usecase chức năng chi tiết
+
+    1. Usecase chức năng Thử nghiệm quần áo 3~~D~~
+
+    `<img src="/images/UC_ThuNghiemQuanAo.png">`
+
+    2. Use chức năng Quản lý thư viện cá nhân
+
+    `<img src="/images/UC_QuanLyThuVien.png">`
+
+## 3.4. Thiết kế mô hình dữ liệu và biểu đồ lớp
+
+## 3.5. Biểu đồ hoạt động
+
+>>>>>>> be0e226ecc42ff51c8c8b5c7f29aa4299565d459
+>>>>>>>
+>>>>>>
+>>>>>
+>>>>
+>>>
+>>
+
+## 3.1. Các biểu đồ Usecase chung của hệ thống
+
+## 3.2. Các biểu đồ Usecase chức năng của admin
+
+`<img src="/images/UC_quanlysanpham.png">`
+
+`<img src="/images/UC_quanlydonhangthanhtoan.png">`
+
 
 ## 3.3. Các biểu đồ Usecase chức năng của user
 
