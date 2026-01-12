@@ -135,11 +135,7 @@ Phạm vi của hệ thống trong khuôn khổ dự án bao gồm:
 * Phát triển website hoạt động trên nền tảng trình duyệt web.
 * Áp dụng công nghệ 3D để mô phỏng trang phục, chưa đi sâu vào mô phỏng vật lý chi tiết (vải, chuyển động phức tạp).
 * Hỗ trợ các chức năng cơ bản phục vụ thử đồ, tìm kiếm và quản lý người dùng.
-* Chưa tích hợp trực tiếp chức năng thanh toán online, chỉ hỗ trợ chuyển hướng tới gian hàng bán sản phẩm.
-
-<<<<<<< HEAD
-
-* =======
+* Chưa tích hợp trực tiếp chức năng thanh toán online, chỉ hỗ trợ chuyển hướng tới gian hàng bán sản phẩm
 
 >>>>>>> 0a9c545d6926e34258734bc799df637bb600e234
 2. Đối tượng & vai trò (Actors)
@@ -149,44 +145,31 @@ Phạm vi của hệ thống trong khuôn khổ dự án bao gồm:
    • Integration Partner: đối tác bán hàng/e-commerce; cấp API key & định dạng dữ liệu.
    • Analytics/BI: hệ thống thu thập sự kiện, tổng hợp & vẽ biểu đồ.
 
->>>>>>> 4eae4a326935c76df0478d8a3eb21f40132e1a30
->>>>>>>
->>>>>>
->>>>>
->>>>
->>>
->>
+# 3. Các biểu đồ phân tích thiết kế hệ thống
 
-3) Chức năng & Use Cases
-   3.1 Thử nghiệm các mẫu quần áo 3D
-   • User chọn item 3D từ catalog → hệ thống render lên avatar (chọn avatar chuẩn hoặc tạo avatar theo số đo: height, chest, waist, hip, etc.).
-   • Tùy chỉnh (màu, size, material preset), xoay/zoom, chụp ảnh snapshot.
-   • Lưu phiên thử (ảnh render + metadata) vào hồ sơ.
-   • Download/Share snapshot (tùy chính sách & watermarks).
-   • Gợi ý size dựa trên số đo/AI (size recommendation).
-   3.2 Lưu trữ các mẫu thử nghiệm
-   • Lưu mô hình 3D (GLB/FBX/OBJ) theo item, phiên bản, vật liệu (PBR).
-   • Lưu phiên thử: avatar config + item config + render snapshot + thời gian.
-   • Quản lý thư viện cá nhân (xem/sửa/xóa).
-   3.3 Tìm quần áo trên gian hàng online
-   • Tìm kiếm theo từ khóa/bộ lọc (giá, brand, size, chất liệu).
-   • Đồng bộ dữ liệu từ đối tác (qua API: sản phẩm, giá, tồn kho, link).
-   • Deep-link/affiliate tới trang mua hàng của gian hàng.
-   3.4 Quản lý thông tin tài khoản
-   • Đăng ký/Đăng nhập (Email/Password, OAuth Google/Apple).
-   • Chỉnh sửa profile (tên, ảnh, số đo).
-   • Bảo mật (MFA, đổi mật khẩu, hoạt động đăng nhập).
-   • Wishlist, lịch sử thử, các sản phẩm đã xem.
-   • Xuất/khôi phục dữ liệu cá nhân (Data portability, GDPR-like).
-   3.5 Quản lý user dành cho admin
-   • CRUD người dùng, khóa/tạm dừng, reset MFA.
-   • Phân quyền (Admin/Moderator/Support).
-   • Kiểm duyệt mẫu 3D, nội dung mô tả.
-   • Nhật ký hoạt động (audit log).
-   3.6 Biểu đồ khảo sát mặt hàng yêu thích
-   • Thu thập sự kiện (view, try-on, add-to-wishlist, click-out).
-   • Tổng hợp & hiển thị biểu đồ: Top items, Top categories, tương tác theo thời gian, heatmap.
-   • Xuất báo cáo (CSV/PDF), đặt lịch gửi email.
+## 3.1. Các biểu đồ Usecase chung của hệ thống
+
+## 3.2. Các biểu đồ Usecase chức năng của admin
+
+## 3.3. Các biểu đồ Usecase chức năng của user
+
+### 3.3.1. Biểu đồ Usecase tổng quát
+
+    `<img src="/images/UC_TongQuat.png">`
+
+### 3.3.2. Biểu đồ Usecase chức năng chi tiết
+
+    1. Usecase chức năng Thử nghiệm quần áo 3~~D~~
+
+    `<img src="/images/UC_ThuNghiemQuanAo.png">`
+
+    2. Use chức năng Quản lý thư viện cá nhân
+
+    `<img src="/images/UC_QuanLyThuVien.png">`
+
+## 3.4. Thiết kế mô hình dữ liệu và biểu đồ lớp
+
+## 3.5. Biểu đồ hoạt động
 
 5. PHÂN TÍCH & THIẾT KẾ HỆ THỐNG
 
