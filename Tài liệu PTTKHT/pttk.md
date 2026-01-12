@@ -86,13 +86,6 @@ Hệ thống là một website (desktop & mobile) cho phép người dùng lựa
 * Phù hợp với ngân sách và tiến độ dự án
 * Khả năng triển khai trên hosting/cloud
 
->>>>>>> f40be4ccf9179634a7a02f9fc4f75deebb12f591
->>>>>>>
->>>>>>
->>>>>
->>>>
->>>
->>
 
 ### **2.1. Mục tiêu xây dựng hệ thống**
 
@@ -140,13 +133,6 @@ Phạm vi của hệ thống trong khuôn khổ dự án bao gồm:
 * Hỗ trợ các chức năng cơ bản phục vụ thử đồ, tìm kiếm và quản lý người dùng.
 * Chưa tích hợp trực tiếp chức năng thanh toán online, chỉ hỗ trợ chuyển hướng tới gian hàng bán sản phẩm
 
->>>>>>> 0a9c545d6926e34258734bc799df637bb600e234
->>>>>>>
->>>>>>
->>>>>
->>>>
->>>
->>
 
 2. Đối tượng & vai trò (Actors)
    • Guest (khách vãng lai): xem sản phẩm, thử demo 3D hạn chế, xem biểu đồ chung (ẩn chi tiết).
@@ -155,17 +141,22 @@ Phạm vi của hệ thống trong khuôn khổ dự án bao gồm:
    • Integration Partner: đối tác bán hàng/e-commerce; cấp API key & định dạng dữ liệu.
    • Analytics/BI: hệ thống thu thập sự kiện, tổng hợp & vẽ biểu đồ.
 
-<<<<<<< HEAD
 
 # 3. Các biểu đồ phân tích thiết kế hệ thống
 
-=======
 
 # 3. Các biểu đồ phân tích thiết kế hệ thống
 
 ## 3.1. Các biểu đồ Usecase chung của hệ thống
 
 ## 3.2. Các biểu đồ Usecase chức năng của admin
+
+1. Usecase quản lý đơn hàng , thanh toán
+
+   `<img src="/images/UC_quanlydonhangthanhtoan.png">`
+2. Usecase quản lý sản phẩm
+
+   `<img src="/images/UC_quanlysanpham.png">`
 
 ## 3.3. Các biểu đồ Usecase chức năng của user
 
@@ -179,7 +170,7 @@ Phạm vi của hệ thống trong khuôn khổ dự án bao gồm:
 
     `<img src="/images/UC_ThuNghiemQuanAo.png">`
 
-    2. Use chức năng Quản lý thư viện cá nhân
+    2. Use chức năng Quản lý thư viện cá nhân .
 
     `<img src="/images/UC_QuanLyThuVien.png">`
 
@@ -220,19 +211,17 @@ Mối quan hệ sử dụng foreign keys (FK) để liên kết, đảm bảo t�
 
 ## 3.5. Biểu đồ hoạt động
 
->>>>>>> be0e226ecc42ff51c8c8b5c7f29aa4299565d459
->>>>>>>
->>>>>>
->>>>>
->>>>
->>>
->>
+
 
 ## 3.1. Các biểu đồ Usecase chung của hệ thống
+
+
+
 
 ## 3.2. Các biểu đồ Usecase chức năng của admin
 
 `<img src="/images/UC_quanlysanpham.png">`
+
 
 `<img src="/images/UC_quanlydonhangthanhtoan.png">`
 
@@ -274,15 +263,18 @@ Mối quan hệ sử dụng foreign keys (FK) để liên kết, đảm bảo t�
 
 # PHÂN TÍCH & THIẾT KẾ HỆ THỐNG
 
-*(System Analysis & Design)*
+## 5. Phân tích hệ thống (System Analysis)
 
-## 1. Phân tích hệ thống (System Analysis)
+### 5.1 Mục tiêu hệ thống
+
+
+ Xây dựng hệ thống **phòng thử đồ 3D trên nền web** kết hợp **thương mại điện tử**
 
 ### 1.1 Mục tiêu hệ thống
 
  279b517 (Add pttkht.md file)
 
-* Xây dựng hệ thống **phòng thử đồ 3D trên nền web** kết hợp **thương mại điện tử**
+
 * Cho phép người dùng:
   * Thử quần áo 3D trên avatar cá nhân
   * Tuỳ chỉnh màu sắc, logo, text
@@ -291,7 +283,7 @@ Mối quan hệ sử dụng foreign keys (FK) để liên kết, đảm bảo t�
 
 ---
 
-### 1.2 Đối tượng sử dụng hệ thống
+### 5.2 Đối tượng sử dụng hệ thống
 
 * **Khách hàng (User)**
   * Xem catalog sản phẩm
@@ -305,7 +297,7 @@ Mối quan hệ sử dụng foreign keys (FK) để liên kết, đảm bảo t�
 
 ---
 
-### 1.3 Phạm vi hệ thống
+### 5.3 Phạm vi hệ thống
 
 * Hệ thống chạy trên nền **Web**
 * Bao gồm:
@@ -316,7 +308,7 @@ Mối quan hệ sử dụng foreign keys (FK) để liên kết, đảm bảo t�
 
 ---
 
-### 1.4 Yêu cầu chức năng (Functional Requirements)
+### 5.4 Yêu cầu chức năng (Functional Requirements)
 
 #### Đối với người dùng
 
@@ -337,7 +329,7 @@ Mối quan hệ sử dụng foreign keys (FK) để liên kết, đảm bảo t�
 
 ---
 
-### 1.5 Yêu cầu phi chức năng (Non-Functional Requirements)
+### 5.5 Yêu cầu phi chức năng (Non-Functional Requirements)
 
 * **Hiệu năng:** Load 3D mượt, tối ưu model
 * **Bảo mật:** JWT, không lưu thông tin thẻ
