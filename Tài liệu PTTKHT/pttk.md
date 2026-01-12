@@ -179,7 +179,7 @@ Phạm vi của hệ thống trong khuôn khổ dự án bao gồm:
 
     `<img src="/images/UC_ThuNghiemQuanAo.png">`
 
-    2. Use chức năng Quản lý thư viện cá nhân
+    2. Use chức năng Quản lý thư viện cá nhân .
 
     `<img src="/images/UC_QuanLyThuVien.png">`
 
@@ -235,7 +235,6 @@ Mối quan hệ sử dụng foreign keys (FK) để liên kết, đảm bảo t�
 `<img src="/images/UC_quanlysanpham.png">`
 
 `<img src="/images/UC_quanlydonhangthanhtoan.png">`
-
 
 ## 3.3. Các biểu đồ Usecase chức năng của user
 
