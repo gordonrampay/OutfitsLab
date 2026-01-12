@@ -1,7 +1,5 @@
 # OutfitsLab
 
-
-
 2. Đối tượng & vai trò (Actors)
    • Guest (khách vãng lai): xem sản phẩm, thử demo 3D hạn chế, xem biểu đồ chung (ẩn chi tiết).
    • User (đã đăng ký): đầy đủ tính năng thử 3D, lưu mst, đồng bộ thiết bị.
@@ -110,3 +108,5 @@
 * **Khả năng mở rộng:** Dễ mở rộng tính năng e-commerce
 * **Khả năng bảo trì:** Code chia module rõ ràng
 * **Khả năng tương thích:** Responsive desktop & mobile
+
+hello
