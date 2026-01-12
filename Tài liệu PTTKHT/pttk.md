@@ -1,8 +1,96 @@
  HEAD
+
 # OutfitsLab
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+# 1.Xác định yêu cầu
+
+## 1.1. Mục tiêu hệ thống
+
+Website thử nghiệm outfit cho phép khách hàng xem trước trang phục trên cơ thể (ảo) nhằm hỗ trợ quyết định mua sắm, nâng cao trải nghiệm người dùng và giảm tỷ lệ hoàn trả.
+
+## 1.2. Đối tượng sử dụng
+
+* Khách hàng (người dùng cuối)
+* Quản trị viên hệ thống
+* Nhân viên quản lý sản phẩm
+
+## 1.3. Phạm vi hệ thống
+
+Hệ thống là một website (desktop & mobile) cho phép người dùng lựa chọn trang phục, thử đồ ảo, lưu và chia sẻ outfit, đồng thời hỗ trợ quản trị sản phẩm và dữ liệu người dùng.
+
+## 1.4. Yêu cầu chức năng
+
+### 1.4.1. Chức năng cho khách hàng
+
+* Đăng ký / đăng nhập tài khoản
+* Đăng nhập bằng mạng xã hội (Google, Facebook – tùy chọn)
+* Tạo hồ sơ cá nhân (giới tính, chiều cao, cân nặng, số đo cơ thể)
+* Tải ảnh cá nhân hoặc chọn người mẫu ảo
+* Lựa chọn trang phục (áo, quần, váy, phụ kiện)
+* Thử nghiệm outfit ảo (mix & match)
+* Xem trước outfit ở nhiều góc độ
+* Lưu outfit yêu thích
+* Chia sẻ outfit qua mạng xã hội
+* Đề xuất outfit dựa trên hồ sơ và lịch sử sử dụng
+
+### 1.4.2. Chức năng cho quản trị viên
+
+* Quản lý tài khoản người dùng
+* Quản lý danh mục sản phẩm (thêm/sửa/xóa)
+* Quản lý hình ảnh và mô hình trang phục
+* Quản lý người mẫu ảo
+* Xem thống kê lượt thử đồ, lượt lưu outfit
+* Phân quyền người dùng
+
+## 1.5. Yêu cầu phi chức năng
+
+### 1.5.1. Hiệu năng
+
+* Thời gian tải trang < 3 giây
+* Xử lý thử đồ ảo trong thời gian thực hoặc gần thời gian thực
+
+### 1.5.2. Tính khả dụng
+
+* Giao diện thân thiện, dễ sử dụng
+* Hỗ trợ đa thiết bị (PC, tablet, mobile)
+* Hỗ trợ đa trình duyệt (Chrome, Edge, Firefox, Safari)
+
+### 1.5.3. Bảo mật
+
+* Mã hóa mật khẩu người dùng
+* Bảo vệ dữ liệu cá nhân và hình ảnh người dùng
+* Phân quyền truy cập rõ ràng
+
+### 1.5.4. Khả năng mở rộng
+
+* Dễ dàng bổ sung sản phẩm, người mẫu, tính năng mới
+* Hỗ trợ tích hợp AI/AR trong tương lai
+
+## 1.6. Yêu cầu dữ liệu
+
+* Thông tin người dùng
+* Thông tin sản phẩm (tên, loại, size, màu sắc, hình ảnh)
+* Dữ liệu outfit đã thử
+* Dữ liệu thống kê hệ thống
+
+## 1.7. Yêu cầu công nghệ (gợi ý)
+
+* Frontend: HTML, CSS, JavaScript (React/Vue)
+* Backend: Node.js / Java / PHP
+* Database: MySQL / PostgreSQL / MongoDB
+* Công nghệ thử đồ: AI/AR, Computer Vision (tùy mức độ)
+
+## 1.8. Ràng buộc hệ thống
+
+* Tuân thủ quy định bảo vệ dữ liệu người dùng
+* Phù hợp với ngân sách và tiến độ dự án
+* Khả năng triển khai trên hosting/cloud
+
+>>>>>>> f40be4ccf9179634a7a02f9fc4f75deebb12f591
 ### **2.1. Mục tiêu xây dựng hệ thống**
 
 Hệ thống **Website thử nghiệm outfit cho khách hàng** được xây dựng nhằm giải quyết các hạn chế của việc mua sắm thời trang trực tuyến truyền thống, đồng thời tận dụng các công nghệ web và đồ họa 3D hiện đại để nâng cao trải nghiệm người dùng.
@@ -50,53 +138,8 @@ Phạm vi của hệ thống trong khuôn khổ dự án bao gồm:
 * Chưa tích hợp trực tiếp chức năng thanh toán online, chỉ hỗ trợ chuyển hướng tới gian hàng bán sản phẩm.
 
 <<<<<<< HEAD
-# I.Xác định yêu cầu
 
-## 1.1 Mục tiêu hệ thống
-
-Website thử nghiệm outfit cho phép khách hàng xem trước trang phục trên cơ thể (ảo) nhằm hỗ trợ quyết định mua sắm, nâng cao trải nghiệm người dùng và giảm tỷ lệ hoàn trả.
-
-## 1.2 Đối tượng sử dụng
-
-* Khách hàng (người dùng cuối)
-* Quản trị viên hệ thống
-* Nhân viên quản lý sản phẩm
-
-## 1.3 Phạm vi hệ thống
-
-Hệ thống là một website (desktop & mobile) cho phép người dùng lựa chọn trang phục, thử đồ ảo, lưu và chia sẻ outfit, đồng thời hỗ trợ quản trị sản phẩm và dữ liệu người dùng.
-
-## 1.4 Yêu cầu chức năng
-
-### 1.4.1. Chức năng cho khách hàng
-
-* Đăng ký / đăng nhập tài khoản
-* Đăng nhập bằng mạng xã hội (Google, Facebook – tùy chọn)
-* Tạo hồ sơ cá nhân (giới tính, chiều cao, cân nặng, số đo cơ thể)
-* Tải ảnh cá nhân hoặc chọn người mẫu ảo
-* Lựa chọn trang phục (áo, quần, váy, phụ kiện)
-* Thử nghiệm outfit ảo (mix & match)
-* Xem trước outfit ở nhiều góc độ
-* Lưu outfit yêu thích
-* Chia sẻ outfit qua mạng xã hội
-* Đề xuất outfit dựa trên hồ sơ và lịch sử sử dụng
-
-### 1.4.2. Chức năng cho quản trị viên
-
-* Quản lý tài khoản người dùng
-* Quản lý danh mục sản phẩm (thêm/sửa/xóa)
-* Quản lý hình ảnh và mô hình trang phục
-* Quản lý người mẫu ảo
-* Xem thống kê lượt thử đồ, lượt lưu outfit
-* Phân quyền người dùng
-
-## 1.5 Yêu cầu phi chức năng
-
-### 1.5.1. Hiệu năng
-
-* Thời gian tải trang < 3 giây
-* Xử
-=======
+* =======
 
 >>>>>>> 0a9c545d6926e34258734bc799df637bb600e234
 2. Đối tượng & vai trò (Actors)
@@ -105,7 +148,14 @@ Hệ thống là một website (desktop & mobile) cho phép người dùng lựa
    • Admin: quản lý users, nội dung (mẫu 3D, catalog), cấu hình tích hợp, dashboard khảo sát.
    • Integration Partner: đối tác bán hàng/e-commerce; cấp API key & định dạng dữ liệu.
    • Analytics/BI: hệ thống thu thập sự kiện, tổng hợp & vẽ biểu đồ.
+
 >>>>>>> 4eae4a326935c76df0478d8a3eb21f40132e1a30
+>>>>>>>
+>>>>>>
+>>>>>
+>>>>
+>>>
+>>
 
 3) Chức năng & Use Cases
    3.1 Thử nghiệm các mẫu quần áo 3D
@@ -145,7 +195,8 @@ Hệ thống là một website (desktop & mobile) cho phép người dùng lựa
 ##1. Phân tích hệ thống (System Analysis)
 
 ###1.1 Mục tiêu hệ thống
-=======
+============================
+
 # PHÂN TÍCH & THIẾT KẾ HỆ THỐNG
 
 *(System Analysis & Design)*
@@ -153,6 +204,7 @@ Hệ thống là một website (desktop & mobile) cho phép người dùng lựa
 ## 1. Phân tích hệ thống (System Analysis)
 
 ### 1.1 Mục tiêu hệ thống
+
  279b517 (Add pttkht.md file)
 
 * Xây dựng hệ thống **phòng thử đồ 3D trên nền web** kết hợp **thương mại điện tử**
