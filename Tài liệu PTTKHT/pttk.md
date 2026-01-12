@@ -1,11 +1,111 @@
+ HEAD
 # OutfitsLab
 
+<<<<<<< HEAD
+=======
+### **2.1. Mục tiêu xây dựng hệ thống**
+
+Hệ thống **Website thử nghiệm outfit cho khách hàng** được xây dựng nhằm giải quyết các hạn chế của việc mua sắm thời trang trực tuyến truyền thống, đồng thời tận dụng các công nghệ web và đồ họa 3D hiện đại để nâng cao trải nghiệm người dùng.
+
+Các mục tiêu chính của hệ thống bao gồm:
+
+* Xây dựng nền tảng thử nghiệm trang phục trực tuyến dựa trên công nghệ 3D, cho phép người dùng quan sát trang phục một cách trực quan.
+* Hỗ trợ người dùng yêu thích thời trang thử nhiều mẫu quần áo khác nhau trước khi đưa ra quyết định mua hàng.
+* Tạo môi trường kết nối giữa người mua và các cửa hàng thời trang nhỏ (seller), giúp mở rộng kênh bán hàng trực tuyến.
+* Góp phần giảm tỷ lệ hoàn trả sản phẩm do không phù hợp kiểu dáng hoặc phong cách.
+* Nâng cao tính cạnh tranh và khả năng tiếp cận khách hàng cho các cửa hàng thời trang nhỏ.
+
+### **2.2. Đối tượng sử dụng hệ thống**
+
+Hệ thống hướng đến các nhóm đối tượng chính sau:
+
+* **Người dùng cá nhân**
+
+  Là những người yêu thích thời trang, có nhu cầu thử trang phục online và mua sắm tiện lợi.
+* **Cửa hàng thời trang / Seller**
+
+  Các cửa hàng kinh doanh thời trang quy mô nhỏ, bán hàng trực tuyến và muốn giới thiệu sản phẩm thông qua hình thức thử đồ 3D.
+* **Quản trị viên (Admin)**
+
+  Người quản lý toàn bộ hệ thống, giám sát người dùng, dữ liệu và hoạt động của website.
+
+### **2.3. Các chức năng chính của hệ thống**
+
+Hệ thống cung cấp các chức năng chính như sau:
+
+* Thử nghiệm các mẫu quần áo 3D trên mô hình người.
+* Lưu trữ các outfit đã thử để người dùng xem lại hoặc so sánh.
+* Tìm kiếm và truy cập các mẫu quần áo từ các gian hàng online có sẵn.
+* Quản lý thông tin tài khoản người dùng (đăng ký, đăng nhập, chỉnh sửa thông tin).
+* Quản lý người dùng hệ thống dành cho admin.
+* Thống kê và hiển thị biểu đồ khảo sát các mặt hàng được người dùng yêu thích.
+
+### **2.4. Phạm vi xây dựng hệ thống**
+
+Phạm vi của hệ thống trong khuôn khổ dự án bao gồm:
+
+* Phát triển website hoạt động trên nền tảng trình duyệt web.
+* Áp dụng công nghệ 3D để mô phỏng trang phục, chưa đi sâu vào mô phỏng vật lý chi tiết (vải, chuyển động phức tạp).
+* Hỗ trợ các chức năng cơ bản phục vụ thử đồ, tìm kiếm và quản lý người dùng.
+* Chưa tích hợp trực tiếp chức năng thanh toán online, chỉ hỗ trợ chuyển hướng tới gian hàng bán sản phẩm.
+
+<<<<<<< HEAD
+# I.Xác định yêu cầu
+
+## 1.1 Mục tiêu hệ thống
+
+Website thử nghiệm outfit cho phép khách hàng xem trước trang phục trên cơ thể (ảo) nhằm hỗ trợ quyết định mua sắm, nâng cao trải nghiệm người dùng và giảm tỷ lệ hoàn trả.
+
+## 1.2 Đối tượng sử dụng
+
+* Khách hàng (người dùng cuối)
+* Quản trị viên hệ thống
+* Nhân viên quản lý sản phẩm
+
+## 1.3 Phạm vi hệ thống
+
+Hệ thống là một website (desktop & mobile) cho phép người dùng lựa chọn trang phục, thử đồ ảo, lưu và chia sẻ outfit, đồng thời hỗ trợ quản trị sản phẩm và dữ liệu người dùng.
+
+## 1.4 Yêu cầu chức năng
+
+### 1.4.1. Chức năng cho khách hàng
+
+* Đăng ký / đăng nhập tài khoản
+* Đăng nhập bằng mạng xã hội (Google, Facebook – tùy chọn)
+* Tạo hồ sơ cá nhân (giới tính, chiều cao, cân nặng, số đo cơ thể)
+* Tải ảnh cá nhân hoặc chọn người mẫu ảo
+* Lựa chọn trang phục (áo, quần, váy, phụ kiện)
+* Thử nghiệm outfit ảo (mix & match)
+* Xem trước outfit ở nhiều góc độ
+* Lưu outfit yêu thích
+* Chia sẻ outfit qua mạng xã hội
+* Đề xuất outfit dựa trên hồ sơ và lịch sử sử dụng
+
+### 1.4.2. Chức năng cho quản trị viên
+
+* Quản lý tài khoản người dùng
+* Quản lý danh mục sản phẩm (thêm/sửa/xóa)
+* Quản lý hình ảnh và mô hình trang phục
+* Quản lý người mẫu ảo
+* Xem thống kê lượt thử đồ, lượt lưu outfit
+* Phân quyền người dùng
+
+## 1.5 Yêu cầu phi chức năng
+
+### 1.5.1. Hiệu năng
+
+* Thời gian tải trang < 3 giây
+* Xử
+=======
+
+>>>>>>> 0a9c545d6926e34258734bc799df637bb600e234
 2. Đối tượng & vai trò (Actors)
    • Guest (khách vãng lai): xem sản phẩm, thử demo 3D hạn chế, xem biểu đồ chung (ẩn chi tiết).
    • User (đã đăng ký): đầy đủ tính năng thử 3D, lưu mst, đồng bộ thiết bị.
    • Admin: quản lý users, nội dung (mẫu 3D, catalog), cấu hình tích hợp, dashboard khảo sát.
    • Integration Partner: đối tác bán hàng/e-commerce; cấp API key & định dạng dữ liệu.
    • Analytics/BI: hệ thống thu thập sự kiện, tổng hợp & vẽ biểu đồ.
+>>>>>>> 4eae4a326935c76df0478d8a3eb21f40132e1a30
 
 3) Chức năng & Use Cases
    3.1 Thử nghiệm các mẫu quần áo 3D
@@ -42,9 +142,18 @@
 
 *(System Analysis & Design)*
 
-1. Phân tích hệ thống (System Analysis)
+##1. Phân tích hệ thống (System Analysis)
 
-1.1 Mục tiêu hệ thống
+###1.1 Mục tiêu hệ thống
+=======
+# PHÂN TÍCH & THIẾT KẾ HỆ THỐNG
+
+*(System Analysis & Design)*
+
+## 1. Phân tích hệ thống (System Analysis)
+
+### 1.1 Mục tiêu hệ thống
+ 279b517 (Add pttkht.md file)
 
 * Xây dựng hệ thống **phòng thử đồ 3D trên nền web** kết hợp **thương mại điện tử**
 * Cho phép người dùng:
