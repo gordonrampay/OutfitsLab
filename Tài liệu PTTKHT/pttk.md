@@ -86,7 +86,6 @@ Hệ thống là một website (desktop & mobile) cho phép người dùng lựa
 * Phù hợp với ngân sách và tiến độ dự án
 * Khả năng triển khai trên hosting/cloud
 
-
 ### **2.1. Mục tiêu xây dựng hệ thống**
 
 Hệ thống **Website thử nghiệm outfit cho khách hàng** được xây dựng nhằm giải quyết các hạn chế của việc mua sắm thời trang trực tuyến truyền thống, đồng thời tận dụng các công nghệ web và đồ họa 3D hiện đại để nâng cao trải nghiệm người dùng.
@@ -133,7 +132,6 @@ Phạm vi của hệ thống trong khuôn khổ dự án bao gồm:
 * Hỗ trợ các chức năng cơ bản phục vụ thử đồ, tìm kiếm và quản lý người dùng.
 * Chưa tích hợp trực tiếp chức năng thanh toán online, chỉ hỗ trợ chuyển hướng tới gian hàng bán sản phẩm
 
-
 2. Đối tượng & vai trò (Actors)
    • Guest (khách vãng lai): xem sản phẩm, thử demo 3D hạn chế, xem biểu đồ chung (ẩn chi tiết).
    • User (đã đăng ký): đầy đủ tính năng thử 3D, lưu mst, đồng bộ thiết bị.
@@ -141,9 +139,7 @@ Phạm vi của hệ thống trong khuôn khổ dự án bao gồm:
    • Integration Partner: đối tác bán hàng/e-commerce; cấp API key & định dạng dữ liệu.
    • Analytics/BI: hệ thống thu thập sự kiện, tổng hợp & vẽ biểu đồ.
 
-
 # 3. Các biểu đồ phân tích thiết kế hệ thống
-
 
 # 3. Các biểu đồ phân tích thiết kế hệ thống
 
@@ -211,21 +207,24 @@ Mối quan hệ sử dụng foreign keys (FK) để liên kết, đảm bảo t�
 
 ## 3.5. Biểu đồ hoạt động
 
-
-
 ## 3.1. Các biểu đồ Usecase chung của hệ thống
-
-
-
 
 ## 3.2. Các biểu đồ Usecase chức năng của admin
 
 `<img src="/images/UC_quanlysanpham.png">`
 
-
 `<img src="/images/UC_quanlydonhangthanhtoan.png">`
 
+
+###1.1 Mục tiêu hệ thống
+
+=======
+
 ## 3.3. Các biểu đồ Usecase chức năng của user
+
+`<img src="/images/UC_DangKy.png">`
+
+`<img src="/images/UC_DangNhap.png">`
 
 ### 3.3.1. Biểu đồ Usecase tổng quát
 
@@ -267,13 +266,11 @@ Mối quan hệ sử dụng foreign keys (FK) để liên kết, đảm bảo t�
 
 ### 5.1 Mục tiêu hệ thống
 
-
  Xây dựng hệ thống **phòng thử đồ 3D trên nền web** kết hợp **thương mại điện tử**
 
 ### 1.1 Mục tiêu hệ thống
 
  279b517 (Add pttkht.md file)
-
 
 * Cho phép người dùng:
   * Thử quần áo 3D trên avatar cá nhân
