@@ -1,6 +1,7 @@
 # OutfitsLab
 
 
+<<<<<<< HEAD
 # I.Xác định yêu cầu
 
 ## 1.1 Mục tiêu hệ thống
@@ -47,6 +48,15 @@ Hệ thống là một website (desktop & mobile) cho phép người dùng lựa
 
 * Thời gian tải trang < 3 giây
 * Xử
+=======
+
+2. Đối tượng & vai trò (Actors)
+   • Guest (khách vãng lai): xem sản phẩm, thử demo 3D hạn chế, xem biểu đồ chung (ẩn chi tiết).
+   • User (đã đăng ký): đầy đủ tính năng thử 3D, lưu mst, đồng bộ thiết bị.
+   • Admin: quản lý users, nội dung (mẫu 3D, catalog), cấu hình tích hợp, dashboard khảo sát.
+   • Integration Partner: đối tác bán hàng/e-commerce; cấp API key & định dạng dữ liệu.
+   • Analytics/BI: hệ thống thu thập sự kiện, tổng hợp & vẽ biểu đồ.
+>>>>>>> 4eae4a326935c76df0478d8a3eb21f40132e1a30
 
 3) Chức năng & Use Cases
    3.1 Thử nghiệm các mẫu quần áo 3D
