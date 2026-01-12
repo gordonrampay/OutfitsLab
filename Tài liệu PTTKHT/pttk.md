@@ -236,7 +236,6 @@ Mối quan hệ sử dụng foreign keys (FK) để liên kết, đảm bảo t�
 
 `<img src="/images/UC_quanlydonhangthanhtoan.png">`
 
-
 ## 3.3. Các biểu đồ Usecase chức năng của user
 
 ### 3.3.1. Biểu đồ Usecase tổng quát
@@ -256,6 +255,22 @@ Mối quan hệ sử dụng foreign keys (FK) để liên kết, đảm bảo t�
 ## 3.4. Thiết kế mô hình dữ liệu và biểu đồ lớp
 
 ## 3.5. Biểu đồ hoạt động
+
+### 3.5.1. Biểu đồ hoạt động chức năng đăng ký
+
+`<img src="/images/AC_DangKy.png">`
+
+### 3.5.2. Biểu đồ hoạt động chức năng đăng nhập
+
+`<img src="/images/AC_DangNhap.png">`
+
+### 3.5.3. Biểu đồ hoạt động chức năng thay đồ
+
+`<img src="/images/AC_ThayDo.png">`
+
+### 3.5.4. Biểu đồ hoạt động chức năng tìm kiếm đồ
+
+`<img src="/images/AC_TimKiem.png">`
 
 # PHÂN TÍCH & THIẾT KẾ HỆ THỐNG
 
