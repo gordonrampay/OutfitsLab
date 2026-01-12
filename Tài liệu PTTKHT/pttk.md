@@ -86,6 +86,7 @@ Hệ thống là một website (desktop & mobile) cho phép người dùng lựa
 * Phù hợp với ngân sách và tiến độ dự án
 * Khả năng triển khai trên hosting/cloud
 
+
 ### **2.1. Mục tiêu xây dựng hệ thống**
 
 Hệ thống **Website thử nghiệm outfit cho khách hàng** được xây dựng nhằm giải quyết các hạn chế của việc mua sắm thời trang trực tuyến truyền thống, đồng thời tận dụng các công nghệ web và đồ họa 3D hiện đại để nâng cao trải nghiệm người dùng.
@@ -130,7 +131,7 @@ Phạm vi của hệ thống trong khuôn khổ dự án bao gồm:
 * Phát triển website hoạt động trên nền tảng trình duyệt web.
 * Áp dụng công nghệ 3D để mô phỏng trang phục, chưa đi sâu vào mô phỏng vật lý chi tiết (vải, chuyển động phức tạp).
 * Hỗ trợ các chức năng cơ bản phục vụ thử đồ, tìm kiếm và quản lý người dùng.
-* Chưa tích hợp trực tiếp chức năng thanh toán online, chỉ hỗ trợ chuyển hướng tới gian hàng bán sản phẩm.
+* Chưa tích hợp trực tiếp chức năng thanh toán online, chỉ hỗ trợ chuyển hướng tới gian hàng bán sản phẩm
 
 
 2. Đối tượng & vai trò (Actors)
@@ -141,43 +142,104 @@ Phạm vi của hệ thống trong khuôn khổ dự án bao gồm:
    • Analytics/BI: hệ thống thu thập sự kiện, tổng hợp & vẽ biểu đồ.
 
 
-3) Chức năng & Use Cases
-   3.1 Thử nghiệm các mẫu quần áo 3D
-   • User chọn item 3D từ catalog → hệ thống render lên avatar (chọn avatar chuẩn hoặc tạo avatar theo số đo: height, chest, waist, hip, etc.).
-   • Tùy chỉnh (màu, size, material preset), xoay/zoom, chụp ảnh snapshot.
-   • Lưu phiên thử (ảnh render + metadata) vào hồ sơ.
-   • Download/Share snapshot (tùy chính sách & watermarks).
-   • Gợi ý size dựa trên số đo/AI (size recommendation).
-   3.2 Lưu trữ các mẫu thử nghiệm
-   • Lưu mô hình 3D (GLB/FBX/OBJ) theo item, phiên bản, vật liệu (PBR).
-   • Lưu phiên thử: avatar config + item config + render snapshot + thời gian.
-   • Quản lý thư viện cá nhân (xem/sửa/xóa).
-   3.3 Tìm quần áo trên gian hàng online
-   • Tìm kiếm theo từ khóa/bộ lọc (giá, brand, size, chất liệu).
-   • Đồng bộ dữ liệu từ đối tác (qua API: sản phẩm, giá, tồn kho, link).
-   • Deep-link/affiliate tới trang mua hàng của gian hàng.
-   3.4 Quản lý thông tin tài khoản
-   • Đăng ký/Đăng nhập (Email/Password, OAuth Google/Apple).
-   • Chỉnh sửa profile (tên, ảnh, số đo).
-   • Bảo mật (MFA, đổi mật khẩu, hoạt động đăng nhập).
-   • Wishlist, lịch sử thử, các sản phẩm đã xem.
-   • Xuất/khôi phục dữ liệu cá nhân (Data portability, GDPR-like).
-   3.5 Quản lý user dành cho admin
-   • CRUD người dùng, khóa/tạm dừng, reset MFA.
-   • Phân quyền (Admin/Moderator/Support).
-   • Kiểm duyệt mẫu 3D, nội dung mô tả.
-   • Nhật ký hoạt động (audit log).
-   3.6 Biểu đồ khảo sát mặt hàng yêu thích
-   • Thu thập sự kiện (view, try-on, add-to-wishlist, click-out).
-   • Tổng hợp & hiển thị biểu đồ: Top items, Top categories, tương tác theo thời gian, heatmap.
-   • Xuất báo cáo (CSV/PDF), đặt lịch gửi email.
+# 3. Các biểu đồ phân tích thiết kế hệ thống
+
+
+# 3. Các biểu đồ phân tích thiết kế hệ thống
+
+## 3.1. Các biểu đồ Usecase chung của hệ thống
+
+## 3.2. Các biểu đồ Usecase chức năng của admin
+
+## 3.3. Các biểu đồ Usecase chức năng của user
+
+### 3.3.1. Biểu đồ Usecase tổng quát
+
+    `<img src="/images/UC_TongQuat.png">`
+
+### 3.3.2. Biểu đồ Usecase chức năng chi tiết
+
+    1. Usecase chức năng Thử nghiệm quần áo 3~~D~~
+
+    `<img src="/images/UC_ThuNghiemQuanAo.png">`
+
+    2. Use chức năng Quản lý thư viện cá nhân .
+
+    `<img src="/images/UC_QuanLyThuVien.png">`
+
+## 3.4. Thiết kế mô hình dữ liệu và biểu đồ lớp
+
+#### 3.4.1. Danh Sách Các Bảng và Chức Năng
+
+Dưới đây là các bảng, với mô tả chức năng chính (liên kết với tính năng dự án):
+
+* **users** : Lưu thông tin tài khoản người dùng (bao gồm admin). Chức năng: Quản lý thông tin tài khoản, phân quyền (user/admin), và theo dõi hoạt động đăng nhập.
+* **stores** : Lưu danh sách các gian hàng online (như Shopee, Lazada). Chức năng: Hỗ trợ tìm kiếm quần áo từ các gian hàng có sẵn.
+* **categories** : Phân loại sản phẩm (ví dụ: Áo, Quần). Chức năng: Giúp tìm kiếm và lọc quần áo theo loại, làm cho tìm kiếm chi tiết hơn.
+* **tags** : Các nhãn mô tả (ví dụ: Mùa hè, Thể thao). Chức năng: Thêm thuộc tính linh hoạt để lọc và tìm kiếm sản phẩm.
+* **clothing_items** : Lưu chi tiết các mẫu quần áo 3D. Chức năng: Lưu trữ mẫu 3D để thử nghiệm, bao gồm link model, giá, và hình ảnh.
+* **sizes** : Danh sách kích cỡ (S, M, L). Chức năng: Quản lý thuộc tính kích cỡ cho sản phẩm, hỗ trợ thử nghiệm phù hợp.
+* **colors** : Danh sách màu sắc (Red, Blue). Chức năng: Quản lý thuộc tính màu cho sản phẩm, hỗ trợ hiển thị biến thể.
+* **item_sizes** : Bảng trung gian liên kết clothing_items với sizes. Chức năng: Xử lý nhiều kích cỡ cho một sản phẩm (many-to-many).
+* **item_colors** : Bảng trung gian liên kết clothing_items với colors. Chức năng: Xử lý nhiều màu cho một sản phẩm (many-to-many).
+* **item_tags** : Bảng trung gian liên kết clothing_items với tags. Chức năng: Xử lý nhiều tags cho một sản phẩm (many-to-many).
+* **trials** : Lưu lịch sử thử nghiệm quần áo. Chức năng: Theo dõi và lưu trữ các mẫu thử nghiệm của user.
+* **favorites** : Lưu lượt yêu thích và rating. Chức năng: Thu thập dữ liệu cho biểu đồ khảo sát mặt hàng yêu thích.
+* **reviews** : Lưu đánh giá chi tiết (comment, rating). Chức năng: Mở rộng khảo sát, hỗ trợ biểu đồ và phản hồi user.
+* **user_sessions** : Lưu phiên đăng nhập. Chức năng: Quản lý và theo dõi hoạt động user (dành cho admin).
+
+#### 3.4.2. Mối Quan Hệ Giữa Các Bảng
+
+Mối quan hệ sử dụng foreign keys (FK) để liên kết, đảm bảo tính toàn vẹn dữ liệu. Dưới đây là tóm tắt (dùng ký hiệu: BảngA > BảngB nghĩa là BảngA tham chiếu đến BảngB qua FK; 1:N là one-to-many, N:M là many-to-many qua bảng trung gian):
+
+* **users > trials, favorites, reviews, user_sessions** (1:N): Một user có nhiều trials, favorites, reviews, sessions; nhưng một trial/favorite/review/session chỉ thuộc một user.
+* **stores > clothing_items** (1:N): Một store cung cấp nhiều items; một item thuộc một store.
+* **categories > clothing_items** (1:N): Một category chứa nhiều items; một item thuộc một category. (Cũng có self-ref: categories > categories cho category con).
+* **tags > item_tags** (1:N): Một tag áp dụng cho nhiều items qua item_tags.
+* **sizes > item_sizes** (1:N): Một size áp dụng cho nhiều items qua item_sizes.
+* **colors > item_colors** (1:N): Một color áp dụng cho nhiều items qua item_colors.
+* **clothing_items > trials, favorites, reviews, item_sizes, item_colors, item_tags** (1:N cho trials/favorites/reviews; N:M cho sizes/colors/tags): Một item được thử nghiệm/thích/đánh giá nhiều lần; và có nhiều sizes/colors/tags qua bảng trung gian.
+
+`<img src="/images/Untitled.png">`
+
+## 3.5. Biểu đồ hoạt động
+
+
+
+## 3.1. Các biểu đồ Usecase chung của hệ thống
 
 
 
 
-##1. Phân tích hệ thống (System Analysis)
+## 3.2. Các biểu đồ Usecase chức năng của admin
+
+`<img src="/images/UC_quanlysanpham.png">`
+
+
+`<img src="/images/UC_quanlydonhangthanhtoan.png">`
+
 
 ###1.1 Mục tiêu hệ thống
+
+## 3.3. Các biểu đồ Usecase chức năng của user
+
+### 3.3.1. Biểu đồ Usecase tổng quát
+
+    `<img src="/images/UC_TongQuat.png">`
+
+### 3.3.2. Biểu đồ Usecase chức năng chi tiết
+
+    1. Usecase chức năng Thử nghiệm quần áo 3~~D~~
+
+    `<img src="/images/UC_ThuNghiemQuanAo.png">`
+
+    2. Use chức năng Quản lý thư viện cá nhân
+
+    `<img src="">`
+
+## 3.4. Thiết kế mô hình dữ liệu và biểu đồ lớp
+
+## 3.5. Biểu đồ hoạt động
 
 # PHÂN TÍCH & THIẾT KẾ HỆ THỐNG
 
@@ -254,3 +316,5 @@ Phạm vi của hệ thống trong khuôn khổ dự án bao gồm:
 * **Khả năng mở rộng:** Dễ mở rộng tính năng e-commerce
 * **Khả năng bảo trì:** Code chia module rõ ràng
 * **Khả năng tương thích:** Responsive desktop & mobile
+
+hello
