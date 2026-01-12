@@ -151,6 +151,13 @@ Phạm vi của hệ thống trong khuôn khổ dự án bao gồm:
 
 ## 3.2. Các biểu đồ Usecase chức năng của admin
 
+1. Usecase quản lý đơn hàng , thanh toán
+
+   `<img src="/images/UC_quanlydonhangthanhtoan.png">`
+2. Usecase quản lý sản phẩm
+
+   `<img src="/images/UC_quanlysanpham.png">`
+
 ## 3.3. Các biểu đồ Usecase chức năng của user
 
 ### 3.3.1. Biểu đồ Usecase tổng quát
