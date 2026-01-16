@@ -198,36 +198,276 @@ Phạm vi của hệ thống trong khuôn khổ dự án bao gồm:
 
 #### 3.4.1. Danh Sách Các Bảng và Chức Năng
 
-Dưới đây là các bảng, với mô tả chức năng chính (liên kết với tính năng dự án):
+##### Bảng `users`
 
-* **users** : Lưu thông tin tài khoản người dùng (bao gồm admin). Chức năng: Quản lý thông tin tài khoản, phân quyền (user/admin), và theo dõi hoạt động đăng nhập.
-* **stores** : Lưu danh sách các gian hàng online (như Shopee, Lazada). Chức năng: Hỗ trợ tìm kiếm quần áo từ các gian hàng có sẵn.
-* **categories** : Phân loại sản phẩm (ví dụ: Áo, Quần). Chức năng: Giúp tìm kiếm và lọc quần áo theo loại, làm cho tìm kiếm chi tiết hơn.
-* **tags** : Các nhãn mô tả (ví dụ: Mùa hè, Thể thao). Chức năng: Thêm thuộc tính linh hoạt để lọc và tìm kiếm sản phẩm.
-* **clothing_items** : Lưu chi tiết các mẫu quần áo 3D. Chức năng: Lưu trữ mẫu 3D để thử nghiệm, bao gồm link model, giá, và hình ảnh.
-* **sizes** : Danh sách kích cỡ (S, M, L). Chức năng: Quản lý thuộc tính kích cỡ cho sản phẩm, hỗ trợ thử nghiệm phù hợp.
-* **colors** : Danh sách màu sắc (Red, Blue). Chức năng: Quản lý thuộc tính màu cho sản phẩm, hỗ trợ hiển thị biến thể.
-* **item_sizes** : Bảng trung gian liên kết clothing_items với sizes. Chức năng: Xử lý nhiều kích cỡ cho một sản phẩm (many-to-many).
-* **item_colors** : Bảng trung gian liên kết clothing_items với colors. Chức năng: Xử lý nhiều màu cho một sản phẩm (many-to-many).
-* **item_tags** : Bảng trung gian liên kết clothing_items với tags. Chức năng: Xử lý nhiều tags cho một sản phẩm (many-to-many).
-* **trials** : Lưu lịch sử thử nghiệm quần áo. Chức năng: Theo dõi và lưu trữ các mẫu thử nghiệm của user.
-* **favorites** : Lưu lượt yêu thích và rating. Chức năng: Thu thập dữ liệu cho biểu đồ khảo sát mặt hàng yêu thích.
-* **reviews** : Lưu đánh giá chi tiết (comment, rating). Chức năng: Mở rộng khảo sát, hỗ trợ biểu đồ và phản hồi user.
-* **user_sessions** : Lưu phiên đăng nhập. Chức năng: Quản lý và theo dõi hoạt động user (dành cho admin).
+Bảng `users` dùng để lưu trữ thông tin tài khoản và hồ sơ của tất cả người dùng trong hệ thống, bao gồm người dùng thường, chủ shop và quản trị viên.
+
+**Các thuộc tính chính:**
+
+* `id`: Khóa chính, định danh duy nhất cho mỗi người dùng
+* `email`: Địa chỉ email đăng nhập
+* `password_hash`: Mật khẩu đã mã hóa (đối với đăng nhập nội bộ)
+* `display_name`: Tên hiển thị của người dùng
+* `avatar_url`: Ảnh đại diện hồ sơ
+* `bio`: Mô tả cá nhân
+* `is_active`: Trạng thái hoạt động của tài khoản
+* `created_at`: Thời điểm tạo tài khoản
+
+**Chức năng:**
+
+Quản lý thông tin người dùng và làm bảng trung tâm liên kết với các chức năng như outfit, blog, shop và phân quyền.Bảng `oauth_accounts`
+
+##### Bảng `oauth_accounts`
+
+Bảng `oauth_accounts` lưu thông tin đăng nhập thông qua các nhà cung cấp bên thứ ba như Google hoặc Facebook.
+
+**Các thuộc tính chính:**
+
+* `id`: Khóa chính
+* `user_id`: Tham chiếu đến bảng users
+* `provider`: Nhà cung cấp OAuth (Google, Facebook)
+* `provider_user_id`: ID người dùng từ nhà cung cấp
+* `created_at`: Thời điểm liên kết tài khoản
+
+**Chức năng:**
+
+Cho phép người dùng đăng nhập bằng nhiều nền tảng khác nhau.
+
+##### Bảng `roles`
+
+Bảng `roles` định nghĩa các vai trò trong hệ thống.
+
+**Các thuộc tính chính:**
+
+* `id`: Khóa chính
+* `name`: Tên vai trò (admin, shop, user)
+
+**Chức năng:**
+
+Hỗ trợ phân quyền truy cập hệ thống.
+
+Bảng `user_roles`
+
+Bảng `user_roles` là bảng trung gian biểu diễn mối quan hệ nhiều-nhiều giữa người dùng và vai trò.
+
+**Các thuộc tính chính:**
+
+* `user_id`: Tham chiếu users
+* `role_id`: Tham chiếu roles
+
+**Chức năng:**
+
+Gán nhiều vai trò cho một người dùng.
+
+---
+
+##### Bảng `gender_models`
+
+Bảng `gender_models` lưu thông tin hai mô hình thử đồ cố định trong hệ thống.
+
+**Các thuộc tính chính:**
+
+* `id`: Khóa chính
+* `name`: Giới tính (Nam / Nữ)
+* `model_3d_url`: Đường dẫn model 3D
+
+**Chức năng:**
+
+Xác định model cơ thể được sử dụng khi thử đồ.
+
+##### Bảng `shops`
+
+Bảng `shops` lưu thông tin cửa hàng của người bán.
+
+**Các thuộc tính chính:**
+
+* `id`: Khóa chính
+* `owner_id`: Người sở hữu shop
+* `shop_name`: Tên shop
+* `avatar_url`: Ảnh đại diện shop
+* `description`: Mô tả shop
+* `created_at`: Ngày tạo
+
+**Chức năng:**
+
+Quản lý thông tin cửa hàng và sản phẩm bán.
+
+---
+
+##### Bảng `item_types`
+
+Bảng `item_types` định nghĩa các loại sản phẩm theo vị trí trong outfit.
+
+**Các thuộc tính chính:**
+
+* `id`: Khóa chính
+* `code`: Mã loại (TOP, BOTTOM, SHOES, HAT, GLASSES, ACCESSORY)
+* `name`: Tên loại
+
+**Chức năng:**
+
+Đảm bảo mỗi outfit chỉ có một sản phẩm cho mỗi vị trí.
+
+---
+
+##### Bảng `items`
+
+Bảng `items` lưu thông tin sản phẩm thời trang đơn lẻ.
+
+**Các thuộc tính chính:**
+
+* `id`: Khóa chính
+* `shop_id`: Shop sở hữu sản phẩm
+* `item_type_id`: Loại sản phẩm
+* `gender_model_id`: Giới tính phù hợp
+* `name`: Tên sản phẩm
+* `affiliate_link`: Liên kết mua hàng
+* `model_3d_url`: Model 3D
+* `is_active`: Trạng thái hiển thị
+* `created_at`: Thời điểm tạo
+
+**Chức năng:**
+
+Quản lý sản phẩm dùng để kết hợp thành outfit.
+
+---
+
+##### Bảng `outfits`
+
+Bảng `outfits` lưu thông tin bộ trang phục do người dùng tạo.
+
+**Các thuộc tính chính:**
+
+* `id`: Khóa chính
+* `user_id`: Người tạo outfit
+* `name`: Tên outfit
+* `created_at`: Thời điểm tạo
+
+**Chức năng:**
+
+Đại diện cho một bộ trang phục hoàn chỉnh.
+
+---
+
+##### Bảng `outfit_items`
+
+Bảng `outfit_items` lưu các sản phẩm cụ thể trong một outfit theo từng vị trí.
+
+**Các thuộc tính chính:**
+
+* `outfit_id`: Outfit
+* `item_type_id`: Vị trí trong outfit
+* `item_id`: Sản phẩm được chọn
+
+**Chức năng:**
+
+Liên kết các item với outfit và đảm bảo mỗi vị trí chỉ có một item.
+
+---
+
+##### Bảng `favorite_outfits`
+
+Bảng `favorite_outfits` lưu danh sách outfit yêu thích của người dùng.
+
+**Các thuộc tính chính:**
+
+* `user_id`
+* `outfit_id`
+
+**Chức năng:**
+
+Cho phép người dùng lưu outfit để thử lại.
+
+---
+
+##### Bảng `blogs`
+
+Bảng `blogs` lưu các bài viết thảo luận trong hệ thống.
+
+**Các thuộc tính chính:**
+
+* `id`: Khóa chính
+* `author_id`: Người viết
+* `title`: Tiêu đề
+* `content`: Nội dung
+* `created_at`: Ngày đăng
+
+**Chức năng:**
+
+Tạo môi trường trao đổi, đánh giá outfit và sản phẩm.
+
+---
+
+##### Bảng `blog_reactions`
+
+Bảng `blog_reactions` lưu lượt thích và không thích của người dùng đối với bài viết.
+
+**Các thuộc tính chính:**
+
+* `blog_id`
+* `user_id`
+* `reaction`: like hoặc dislike
+
+**Chức năng:**
+
+Ghi nhận mức độ quan tâm của cộng đồng.
+
+---
+
+##### Bảng `blog_comments`
+
+Bảng `blog_comments` lưu các bình luận của người dùng.
+
+**Các thuộc tính chính:**
+
+* `id`
+* `blog_id`
+* `user_id`
+* `content`
+* `created_at`
+
+**Chức năng:**
+
+Cho phép người dùng trao đổi và phản hồi bài viết.
 
 #### 3.4.2. Mối Quan Hệ Giữa Các Bảng
 
 Mối quan hệ sử dụng foreign keys (FK) để liên kết, đảm bảo tính toàn vẹn dữ liệu. Dưới đây là tóm tắt (dùng ký hiệu: BảngA > BảngB nghĩa là BảngA tham chiếu đến BảngB qua FK; 1:N là one-to-many, N:M là many-to-many qua bảng trung gian):
 
-* **users > trials, favorites, reviews, user_sessions** (1:N): Một user có nhiều trials, favorites, reviews, sessions; nhưng một trial/favorite/review/session chỉ thuộc một user.
-* **stores > clothing_items** (1:N): Một store cung cấp nhiều items; một item thuộc một store.
-* **categories > clothing_items** (1:N): Một category chứa nhiều items; một item thuộc một category. (Cũng có self-ref: categories > categories cho category con).
-* **tags > item_tags** (1:N): Một tag áp dụng cho nhiều items qua item_tags.
-* **sizes > item_sizes** (1:N): Một size áp dụng cho nhiều items qua item_sizes.
-* **colors > item_colors** (1:N): Một color áp dụng cho nhiều items qua item_colors.
-* **clothing_items > trials, favorites, reviews, item_sizes, item_colors, item_tags** (1:N cho trials/favorites/reviews; N:M cho sizes/colors/tags): Một item được thử nghiệm/thích/đánh giá nhiều lần; và có nhiều sizes/colors/tags qua bảng trung gian.
+* **Users – OAuth Accounts:** Quan hệ 1–N
 
-`<img src="/images/Untitled.png">`
+  Một người dùng có thể liên kết nhiều tài khoản đăng nhập bên ngoài.
+* **Users – Roles:** Quan hệ N–N
+
+  Một người dùng có thể có nhiều vai trò, một vai trò có thể gán cho nhiều người dùng.
+* **Users – Shops:** Quan hệ 1–1
+
+  Một người dùng có thể đăng ký một shop.
+* **Shops – Items:** Quan hệ 1–N
+
+  Một shop quản lý nhiều sản phẩm.
+* **Item Types – Items:** Quan hệ 1–N
+
+  Mỗi loại item gồm nhiều sản phẩm.
+* **Users – Outfits:** Quan hệ 1–N
+
+  Một người dùng có thể tạo nhiều outfit.
+* **Outfits – Items:** Quan hệ N–N (qua `outfit_items`)
+
+  Một outfit gồm nhiều item, một item có thể xuất hiện trong nhiều outfit.
+* **Users – Favorite Outfits:** Quan hệ N–N
+
+  Người dùng có thể yêu thích nhiều outfit.
+* **Users – Blogs:** Quan hệ 1–N
+
+  Một người dùng có thể viết nhiều bài blog.
+* **Blogs – Reactions / Comments:** Quan hệ 1–N
+
+  Một bài viết có nhiều lượt thích, không thích và bình luận.
+
+#### 3.4.3. Mối Quan Hệ Giữa Các Bảng
+
+`<img src="/images/class.png">`
 
 ## 3.5. Biểu đồ hoạt động
 
