@@ -164,11 +164,35 @@ Phạm vi của hệ thống trong khuôn khổ dự án bao gồm:
 
     1. Usecase chức năng Thử nghiệm quần áo 3~~D~~
 
-    `<img src="/images/UC_ThuNghiemQuanAo.png">`
+    `<img src="/images/UC_ThuQuanAo3D.png">`
 
-    2. Use chức năng Quản lý thư viện cá nhân .
+    2. Usecase chức năng Chọn kích thước cơ thể
 
-    `<img src="/images/UC_QuanLyThuVien.png">`
+    `<img src="/images/UC_ChonKichThuoc.png">`
+
+    3. Usecase chức năng Đăng kí
+
+    `<img src="/images/UC_DangKyUser.png">`
+
+    4. Usecase chức năng Đăng nhập
+
+    `<img src="/images/UC_DangNhapUser.png">`
+
+    5. Usecase chức năng Quản lý tài khoản
+
+    `<img src="/images/UC_QuanLyTaiKhoan.png">`
+
+    6. Usecase chức năng Tìm kiếm sản phẩm
+
+    `<img src="/images/UC_TimKiemSanPham.png">`
+
+    7. Usecase chức năng Quản lý sản phẩm yêu thích
+
+    `<img src="/images/UC_QuanLySPYeuThich.png">`
+
+    8. Usecase chức năng Báo lỗi
+
+    `<img src="/images/BaoLoi.png">`
 
 ## 3.4. Thiết kế mô hình dữ liệu và biểu đồ lớp
 
@@ -204,43 +228,6 @@ Mối quan hệ sử dụng foreign keys (FK) để liên kết, đảm bảo t�
 * **clothing_items > trials, favorites, reviews, item_sizes, item_colors, item_tags** (1:N cho trials/favorites/reviews; N:M cho sizes/colors/tags): Một item được thử nghiệm/thích/đánh giá nhiều lần; và có nhiều sizes/colors/tags qua bảng trung gian.
 
 `<img src="/images/Untitled.png">`
-
-## 3.5. Biểu đồ hoạt động
-
-## 3.1. Các biểu đồ Usecase chung của hệ thống
-
-## 3.2. Các biểu đồ Usecase chức năng của admin
-
-`<img src="/images/UC_quanlysanpham.png">`
-
-`<img src="/images/UC_quanlydonhangthanhtoan.png">`
-
-
-###1.1 Mục tiêu hệ thống
-
-=======
-
-## 3.3. Các biểu đồ Usecase chức năng của user
-
-`<img src="/images/UC_DangKy.png">`
-
-`<img src="/images/UC_DangNhap.png">`
-
-### 3.3.1. Biểu đồ Usecase tổng quát
-
-    `<img src="/images/UC_TongQuat.png">`
-
-### 3.3.2. Biểu đồ Usecase chức năng chi tiết
-
-    1. Usecase chức năng Thử nghiệm quần áo 3~~D~~
-
-    `<img src="/images/UC_ThuNghiemQuanAo.png">`
-
-    2. Use chức năng Quản lý thư viện cá nhân
-
-    `<img src="">`
-
-## 3.4. Thiết kế mô hình dữ liệu và biểu đồ lớp
 
 ## 3.5. Biểu đồ hoạt động
 
