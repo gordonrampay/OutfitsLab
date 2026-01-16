@@ -211,9 +211,35 @@ Phạm vi của hệ thống trong khuôn khổ dự án bao gồm:
 
     `<img src="/images/BaoLoi.png">`
 
-## 3.4. Thiết kế mô hình dữ liệu và biểu đồ lớp
+## 3.4. Các biểu đồ Usecase chức năng của seller
 
-#### 3.4.1. Danh Sách Các Bảng và Chức Năng
+### 3.4.1. Usecase Tổng quát
+
+`<img src="/images/UC_Seller.png">`
+
+### 3.4.2. Usecase chức năng Quản lý đơn hàng
+
+`<img src="/images/UC_OrderManager.png">`
+
+### 3.4.3. Usecase chức năng Quản lý sản phẩm
+
+`<img src="/images/UC_ProductManager.png">`
+
+### 3.4.4. Usecase chức năng Báo cáo, thống kê
+
+`<img src="/images/UC_AnalyticsReporting.png">`
+
+### 3.4.5. Usecase chức năng Quản lý Hồ sơ Shop
+
+`<img src="/images/UC_ShopProfile.png">`
+
+3.4.6. Usecase chức năng Chăm sóc khách hàng
+
+`<img src="/images/UC_CustomerService.png">`
+
+## 3.5. Thiết kế mô hình dữ liệu và biểu đồ lớp
+
+#### 3.5.1. Danh Sách Các Bảng và Chức Năng
 
 ##### Bảng `users`
 
@@ -447,7 +473,7 @@ Bảng `blog_comments` lưu các bình luận của người dùng.
 
 Cho phép người dùng trao đổi và phản hồi bài viết.
 
-#### 3.4.2. Mối Quan Hệ Giữa Các Bảng
+#### 3.5.2. Mối Quan Hệ Giữa Các Bảng
 
 Mối quan hệ sử dụng foreign keys (FK) để liên kết, đảm bảo tính toàn vẹn dữ liệu. Dưới đây là tóm tắt (dùng ký hiệu: BảngA > BảngB nghĩa là BảngA tham chiếu đến BảngB qua FK; 1:N là one-to-many, N:M là many-to-many qua bảng trung gian):
 
@@ -482,25 +508,25 @@ Mối quan hệ sử dụng foreign keys (FK) để liên kết, đảm bảo t�
 
   Một bài viết có nhiều lượt thích, không thích và bình luận.
 
-#### 3.4.3. Mối Quan Hệ Giữa Các Bảng
+#### 3.5.3. Mối Quan Hệ Giữa Các Bảng
 
 `<img src="/images/class.png">`
 
-## 3.5. Biểu đồ hoạt động
+## 3.6. Biểu đồ hoạt động
 
-### 3.5.1. Biểu đồ hoạt động chức năng đăng ký
+### 3.6.1. Biểu đồ hoạt động chức năng đăng ký
 
 `<img src="/images/AC_DangKy.png">`
 
-### 3.5.2. Biểu đồ hoạt động chức năng đăng nhập
+### 3.6.2. Biểu đồ hoạt động chức năng đăng nhập
 
 `<img src="/images/AC_DangNhap.png">`
 
-### 3.5.3. Biểu đồ hoạt động chức năng thay đồ
+### 3.6.3. Biểu đồ hoạt động chức năng thay đồ
 
 `<img src="/images/AC_ThayDo.png">`
 
-### 3.5.4. Biểu đồ hoạt động chức năng tìm kiếm đồ
+### 3.6.4. Biểu đồ hoạt động chức năng tìm kiếm đồ
 
 `<img src="/images/AC_TimKiem.png">`
 
