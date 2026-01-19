@@ -2,35 +2,33 @@
 
 # OutfitsLab
 
-# 1.Xác định yêu cầu
+# 1. Xác định yêu cầu
 
 ## 1.1. Mục tiêu hệ thống
 
-Website thử nghiệm outfit cho phép khách hàng xem trước trang phục trên cơ thể (ảo) nhằm hỗ trợ quyết định mua sắm, nâng cao trải nghiệm người dùng và giảm tỷ lệ hoàn trả.
+Website thử nghiệm outfit có nhiệm vụ cho phép khách hàng xem trước các trang phục trên cơ thể ảo. Mục tiêu chính là hỗ trợ quá trình quyết định mua sắm của khách hàng, nâng cao trải nghiệm người dùng và giảm thiểu tỷ lệ hoàn trả hàng hóa.
 
 ## 1.2. Đối tượng sử dụng
 
-* Khách hàng (người dùng cuối)
-* Quản trị viên hệ thống
-* Nhân viên quản lý sản phẩm
+* **Khách hàng (người dùng cuối)** : Những người muốn thử nghiệm các trang phục trước khi mua.
+* **Quản trị viên hệ thống** : Người có trách nhiệm quản lý và duy trì hệ thống.
+* **Người bán hàng** : Những người quản lý danh mục sản phẩm và dữ liệu liên quan.
 
 ## 1.3. Phạm vi hệ thống
 
-Hệ thống là một website (desktop & mobile) cho phép người dùng lựa chọn trang phục, thử đồ ảo, lưu và chia sẻ outfit, đồng thời hỗ trợ quản trị sản phẩm và dữ liệu người dùng.
-
-## 1.4. Yêu cầu chức năng
+Hệ thống sẽ được phát triển thành một website hoạt động trên cả nền tảng desktop và mobile. Nó cho phép người dùng thực hiện các chức năng như lựa chọn trang phục, thử đồ ảo, lưu và chia sẻ các bộ trang phục. Ngoài ra, hệ thống còn tích hợp các công cụ hỗ trợ quản trị sản phẩm và quản lý dữ liệu người dùng.
 
 ### 1.4.1. Chức năng cho khách hàng
 
 * Đăng ký / đăng nhập tài khoản
 * Đăng nhập bằng mạng xã hội (Google, Facebook – tùy chọn)
 * Tạo hồ sơ cá nhân (giới tính, chiều cao, cân nặng, số đo cơ thể)
-* Tải ảnh cá nhân hoặc chọn người mẫu ảo
+* Chọn người mẫu ảo theo giới tính
 * Lựa chọn trang phục (áo, quần, váy, phụ kiện)
 * Thử nghiệm outfit ảo (mix & match)
 * Xem trước outfit ở nhiều góc độ
 * Lưu outfit yêu thích
-* Chia sẻ outfit qua mạng xã hội
+* Chia sẻ outfit qua diễn đàn
 * Đề xuất outfit dựa trên hồ sơ và lịch sử sử dụng
 
 ### 1.4.2. Chức năng cho quản trị viên
@@ -41,6 +39,13 @@ Hệ thống là một website (desktop & mobile) cho phép người dùng lựa
 * Quản lý người mẫu ảo
 * Xem thống kê lượt thử đồ, lượt lưu outfit
 * Phân quyền người dùng
+
+### 1.4.3. Chức năng cho shop
+
+* Quản lý danh mục sản phẩm (thêm/sửa/xóa)
+* Quản lý hình ảnh và mô hình trang phục
+* Xem thống kê lượt thử đồ, lượt lưu outfit, lượt xem
+* Chỉnh sửa hồ sơ cửa hàng
 
 ## 1.5. Yêu cầu phi chức năng
 
