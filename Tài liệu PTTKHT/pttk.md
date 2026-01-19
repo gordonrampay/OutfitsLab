@@ -573,6 +573,22 @@ Mối quan hệ sử dụng foreign keys (FK) để liên kết, đảm bảo t�
 
     `<img src="/images/SE_BaoLoi_3.png">`
 
+## 3.8. Biểu đồ tuần tự của Admin
+
+### 3.8.1. Biểu đồ tuần tự thêm sản phẩm
+
+![1768805902778](image/pttk/1768805902778.png)
+
+### 3.8.2. Biểu đồ tuần tự xem khiếu nại
+
+![1768805959311](image/pttk/1768805959311.png)
+
+### 3.8.3. Biểu đồ tuần tự phê duyệt người bán
+
+![1768806004519](image/pttk/1768806004519.png)
+
+
+
 # PHÂN TÍCH & THIẾT KẾ HỆ THỐNG
 
 ## 5. Phân tích hệ thống (System Analysis)
