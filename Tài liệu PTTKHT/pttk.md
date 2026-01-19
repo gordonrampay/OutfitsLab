@@ -147,27 +147,27 @@ Phạm vi của hệ thống trong khuôn khổ dự án bao gồm:
 
 ## 3.2. Các biểu đồ Usecase chức năng của admin
 
-3.2.1. Biểu đồ quản lý sản phẩm
+### 3.2.1. Biểu đồ quản lý sản phẩm
 
  `<img src="/images/UC_quanlysanpham.png">`
 
-3.2.2. Biểu đồ Usecase quản lý đơn hàng ,thanh toán
+### 3.2.2. Biểu đồ Usecase quản lý đơn hàng ,thanh toán
 
 `<img src="/images/UC_quanlydonhangthanhtoan.png">`
 
-3.2.3. Biểu đồ Usecase cấu hình hệ thống
+### 3.2.3. Biểu đồ Usecase cấu hình hệ thống
 
 `<img src="/images/UC_CauHinhHeThong.png">`
 
-3.2.4. Biểu đồ Usecase quản lý báo cáo
+### 3.2.4. Biểu đồ Usecase quản lý báo cáo
 
 `<img src="/images/UC_QuanLyBaoCao.png">`
 
-3.2.5. Biểu đồ Usecase quản lý người bán
+### 3.2.5. Biểu đồ Usecase quản lý người bán
 
 `<img src="/images/UC_QuanLyNguoiBan.png">`
 
-3.2.5. Biểu đồ Usecase quản lý người dùng
+### 3.2.5. Biểu đồ Usecase quản lý người dùng
 
 `<img src="/images/UC_QuanLyNguoiDung.png">`
 
@@ -529,6 +529,44 @@ Mối quan hệ sử dụng foreign keys (FK) để liên kết, đảm bảo t�
 ### 3.6.4. Biểu đồ hoạt động chức năng tìm kiếm đồ
 
 `<img src="/images/AC_TimKiem.png">`
+
+## 3.7. Biểu đồ tuần tự của User
+
+### 3.7.1. Biểu đồ tuần tự Đăng kí tài khoản
+
+    `<img src="/images/SE_DKTaiKhoan.png">`
+
+### 3.7.2. Biểu đồ tuần tự Đăng nhập tài khoản
+
+    `<img src="/images/SE_DangNhapUser.png">`
+
+### 3.7.3. Biểu đồ tuần tự Thử đồ 3D
+
+    `<img src="/images/SE_ThuDo3D.png">`
+
+### 3.7.3. Biểu đồ tuần tự Chọn kích thước cơ thể
+
+    `<img src="/images/SE_ChonSizeCoThe.png">`
+
+### 3.7.4. Biểu đồ tuần tự Quản lý tài khoản
+
+    `<img src="/images/SE_QuanLyTKUser.png">`
+
+### 3.7.5. Biểu đồ tuần tự Tìm kiếm sản phẩm
+
+    `<img src="/images/SE_TimKiemSanPham.png">`
+
+### 3.7.6. Biểu đồ tuần tự Quản lý sản phẩm
+
+    `<img src="/images/SE_QuanLySPYeuThich.png">`
+
+### 3.7.7. Biểu đồ tuần tự Báo lỗi
+
+    `<img src="/images/SE_BaoLoi_1.png">`
+
+    `<img src="/images/SE_BaoLoi_2.png">`
+
+    `<img src="/images/SE_BaoLoi_3.png">`
 
 # PHÂN TÍCH & THIẾT KẾ HỆ THỐNG
 
