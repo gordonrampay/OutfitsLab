@@ -535,7 +535,27 @@ Mối quan hệ sử dụng foreign keys (FK) để liên kết, đảm bảo t�
 
 `<img src="/images/AC_TimKiem.png">`
 
-## 3.7. Biểu đồ tuần tự của User
+### 3.6.5. Biểu đồ hoạt động chức năng đăng xuất
+
+`<img src="/images/AC_DangXuat.png">`
+
+### 3.6.6. Biểu đồ hoạt động chức năng thêm vào giỏ hàng
+
+`<img src="/images/AC_ThemSPvaogiohang.png">`
+
+### 3.6.7. Biểu đồ hoạt động chức năng xem chi tiết sản phẩm
+
+`<img src="/images/AC_XemChiTietSP.png">`
+
+### 3.6.8. Biểu đồ hoạt động chức năng lưu bộ trang phục
+
+`<img src="/images/AC_LuuOutfit.png">`
+
+### 3.6.9. Biểu đồ hoạt động chức năng Quản lý sản phẩm Admin
+
+`<img src="/images/AC_QuanLySPcuaAdmin.png">`
+
+### 3.7. Biểu đồ tuần tự của User
 
 ### 3.7.1. Biểu đồ tuần tự Đăng kí tài khoản
 
