@@ -594,16 +594,18 @@ Mối quan hệ sử dụng foreign keys (FK) để liên kết, đảm bảo t�
     `<img src="/images/SE_BaoLoi_3.png">`
 
 <<<<<<< HEAD
+
 ## 3.8. BIểu đồ tuần tự của shop
 
-### 3.8.1. Biểu đồ tuần tự shop đăng kí cộng tác 
+### 3.8.1. Biểu đồ tuần tự shop đăng kí cộng tác
 
 `<img src="/images/SE_RegisterShop.png">`
 
 ### 3.8.1. Biểu đồ tuần tự shop đẩy sản phẩm lên
 
 `<img src="/images/SE_DaySanPham.png">`
-=======
+===
+
 ## 3.8. Biểu đồ tuần tự của Admin
 
 ### 3.8.1. Biểu đồ tuần tự thêm sản phẩm
@@ -618,8 +620,6 @@ Mối quan hệ sử dụng foreign keys (FK) để liên kết, đảm bảo t�
 
 ![1768806004519](image/pttk/1768806004519.png)
 
-
->>>>>>> 6c0febff5bb1f10290aca3cd89f96dff17b86726
 
 # PHÂN TÍCH & THIẾT KẾ HỆ THỐNG
 
