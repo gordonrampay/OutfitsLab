@@ -551,9 +551,25 @@ Mối quan hệ sử dụng foreign keys (FK) để liên kết, đảm bảo t�
 
 `<img src="/images/AC_LuuOutfit.png">`
 
-### 3.6.9. Biểu đồ hoạt động chức năng Quản lý sản phẩm Admin
+### 3.6.9. Biểu đồ hoạt động chức năng quản lý sản phẩm Admin
 
 `<img src="/images/AC_QuanLySPcuaAdmin.png">`
+
+### 3.6.10. Biểu đồ hoạt động chức năng thanh toán
+
+`<img src="/images/AC_ThanhToan.png">`
+
+### 3.6.11. Biểu đồ hoạt động chức năng quản lý đơn hàng của User
+
+`<img src="/images/AC_QLDonHang.png">`
+
+### 3.6.12. Biểu đồ hoạt động chức năng quản lý thông tin cá nhân
+
+`<img src="/images/AC_QLThongTinCaNhanUser.png">`
+
+### 3.6.13. Biểu đồ hoạt động chức năng xem giỏ hàng
+
+`<img src="/images/AC_XemGioHang.png">`
 
 ### 3.7. Biểu đồ tuần tự của User
 
