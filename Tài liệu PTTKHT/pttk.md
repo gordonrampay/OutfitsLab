@@ -594,16 +594,18 @@ Mối quan hệ sử dụng foreign keys (FK) để liên kết, đảm bảo t�
     `<img src="/images/SE_BaoLoi_3.png">`
 
 <<<<<<< HEAD
+
 ## 3.8. BIểu đồ tuần tự của shop
 
-### 3.8.1. Biểu đồ tuần tự shop đăng kí cộng tác 
+### 3.8.1. Biểu đồ tuần tự shop đăng kí cộng tác
 
 `<img src="/images/SE_RegisterShop.png">`
 
 ### 3.8.1. Biểu đồ tuần tự shop đẩy sản phẩm lên
 
 `<img src="/images/SE_DaySanPham.png">`
-=======
+===
+
 ## 3.8. Biểu đồ tuần tự của Admin
 
 ### 3.8.1. Biểu đồ tuần tự thêm sản phẩm
@@ -618,8 +620,141 @@ Mối quan hệ sử dụng foreign keys (FK) để liên kết, đảm bảo t�
 
 ![1768806004519](image/pttk/1768806004519.png)
 
+## 4. Đặc tả Use Case
 
->>>>>>> 6c0febff5bb1f10290aca3cd89f96dff17b86726
+### 4.1. Đặc tả Use Case chức năng User
+
+#### 4.1.1. Đặc tả Use Case UC-01: Thử nghiệm quần áo 3D
+
+**Mã Use Case:** UC-01
+
+**Tên Use Case:** Thử nghiệm quần áo 3D
+
+**Actor chính:** User
+
+**Actor phụ:** Hệ thống 3D Engine
+
+**Mô tả:**
+
+Cho phép người dùng thử các sản phẩm thời trang trên mô hình cơ thể ảo thông qua công nghệ hiển thị 3D nhằm hỗ trợ quyết định mua sắm.
+
+**Điều kiện tiên quyết:**
+
+* Người dùng đã đăng nhập hệ thống
+* Người dùng đã thiết lập hồ sơ cơ thể hoặc chọn model mặc định
+
+**Luồng chính (Main Flow):**
+
+1. User chọn một sản phẩm từ danh sách
+2. Hệ thống tải mô hình 3D của sản phẩm
+3. Hệ thống hiển thị sản phẩm trên avatar
+4. User thao tác xoay, phóng to, thu nhỏ mô hình
+5. User tiếp tục thử các sản phẩm khác
+
+**Luồng thay thế (Alternative Flow):**
+
+* **3a:** Nếu mô hình 3D chưa có
+
+  → Hệ thống hiển thị hình ảnh 2D của sản phẩm
+
+**Luồng ngoại lệ (Exception Flow):**
+
+* **2e:** Lỗi tải mô hình 3D
+
+  → Hệ thống hiển thị thông báo lỗi và ghi nhận log
+
+**Hậu điều kiện:**
+
+* Lịch sử thử đồ được lưu lại cho người dùng
+
+## 4.1.2. Đặc tả Use Case UC-02: Tạo và lưu Outfit
+
+**Mã Use Case:** UC-02
+
+**Actor:** User
+
+**Mô tả:**
+
+Cho phép người dùng kết hợp nhiều sản phẩm đã thử thành một bộ trang phục hoàn chỉnh (outfit) và lưu lại để sử dụng sau.
+
+**Điều kiện tiên quyết:**
+
+* Người dùng đã đăng nhập
+* Đã thử ít nhất một sản phẩm
+
+**Luồng chính:**
+
+1. User chọn các sản phẩm muốn kết hợp
+2. Hệ thống kiểm tra xung đột loại trang phục
+3. User đặt tên cho outfit
+4. User chọn “Lưu outfit”
+5. Hệ thống lưu outfit vào cơ sở dữ liệu
+
+**Ràng buộc nghiệp vụ:**
+
+* Một outfit chỉ có tối đa một sản phẩm cho mỗi vị trí (áo, quần, giày…)
+* Sản phẩm phải phù hợp giới tính của avatar
+
+**Hậu điều kiện:**
+
+* Outfit được lưu và hiển thị trong danh sách cá nhân
+
+## 4.1.3. Đặc tả Use Case UC-03: Chọn kích thước cơ thể
+
+**Mã Use Case:** UC-03
+
+**Actor:** User
+
+**Mô tả:**
+
+Cho phép người dùng nhập và điều chỉnh các thông số cơ thể để tăng độ chính xác khi thử đồ 3D.
+
+Luồng chính:
+
+1. User nhập chiều cao và cân nặng
+2. User nhập số đo chi tiết (vai, eo, hông)
+3. Hệ thống cập nhật avatar tương ứng
+4. User xác nhận lưu hồ sơ cơ thể
+
+**Luồng thay thế:**
+
+* **1a:** User chọn profile có sẵn
+
+  → Hệ thống hiển thị avatar mặc định
+
+**Hậu điều kiện:**
+
+* Hồ sơ cơ thể được lưu và áp dụng cho các lần thử đồ sau
+
+## 4.1.4. Đặc tả Use Case UC-04: Báo lỗi
+
+**Mã Use Case:** UC-04
+
+**Actor chính:** User
+
+**Actor phụ:** Admin / Seller
+
+**Mô tả:**
+
+Cho phép người dùng gửi phản hồi hoặc báo lỗi khi gặp sự cố trong quá trình sử dụng hệ thống.
+
+**Luồng chính:**
+
+1. User chọn chức năng “Báo lỗi”
+2. Nhập nội dung mô tả lỗi
+3. Đính kèm hình ảnh (nếu có)
+4. Gửi yêu cầu
+5. Hệ thống tạo ticket và thông báo xác nhận
+
+**Trạng thái ticket:**
+
+* Mới tạo
+* Đang xử lý
+* Đã hoàn thành
+
+**Hậu điều kiện:**
+
+* Ticket được lưu và hiển thị trong hệ thống quản lý
 
 # PHÂN TÍCH & THIẾT KẾ HỆ THỐNG
 
