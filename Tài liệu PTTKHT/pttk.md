@@ -611,17 +611,6 @@ Mối quan hệ sử dụng foreign keys (FK) để liên kết, đảm bảo t�
 
 <<<<<<< HEAD
 
-## 3.8. BIểu đồ tuần tự của shop
-
-### 3.8.1. Biểu đồ tuần tự shop đăng kí cộng tác
-
-`<img src="/images/SE_RegisterShop.png">`
-
-### 3.8.1. Biểu đồ tuần tự shop đẩy sản phẩm lên
-
-`<img src="/images/SE_DaySanPham.png">`
-===
-
 ## 3.8. Biểu đồ tuần tự của Admin
 
 ### 3.8.1. Biểu đồ tuần tự thêm sản phẩm
@@ -635,6 +624,21 @@ Mối quan hệ sử dụng foreign keys (FK) để liên kết, đảm bảo t�
 ### 3.8.3. Biểu đồ tuần tự phê duyệt người bán
 
 `<img src="/images/SE_RequestAccept.png">`
+
+
+## 3.9. BIểu đồ tuần tự của shop
+
+### 3.9.1. Biểu đồ tuần tự shop đăng kí cộng tác
+
+`<img src="/images/SE_RegisterShop.png">`
+
+### 3.9.1. Biểu đồ tuần tự shop đẩy sản phẩm lên
+
+`<img src="/images/SE_DaySanPham.png">`
+
+### 3.9.3. Biểu đồ tuần tự shop quản lý đơn hàng
+
+`<img src="/images/SE_QuanLyDonHang.png">`
 
 # 4. Đặc tả Use Case
 
