@@ -18,6 +18,8 @@ Website thử nghiệm outfit có nhiệm vụ cho phép khách hàng xem trư�
 
 Hệ thống sẽ được phát triển thành một website hoạt động trên cả nền tảng desktop và mobile. Nó cho phép người dùng thực hiện các chức năng như lựa chọn trang phục, thử đồ ảo, lưu và chia sẻ các bộ trang phục. Ngoài ra, hệ thống còn tích hợp các công cụ hỗ trợ quản trị sản phẩm và quản lý dữ liệu người dùng.
 
+## 1.4
+
 ### 1.4.1. Chức năng cho khách hàng
 
 * Đăng ký / đăng nhập tài khoản
@@ -91,7 +93,7 @@ Hệ thống sẽ được phát triển thành một website hoạt động tr�
 * Phù hợp với ngân sách và tiến độ dự án
 * Khả năng triển khai trên hosting/cloud
 
-### **2.1. Mục tiêu xây dựng hệ thống**
+# 2. Mục tiêu xây dựng hệ thống
 
 Hệ thống **Website thử nghiệm outfit cho khách hàng** được xây dựng nhằm giải quyết các hạn chế của việc mua sắm thời trang trực tuyến truyền thống, đồng thời tận dụng các công nghệ web và đồ họa 3D hiện đại để nâng cao trải nghiệm người dùng.
 
@@ -103,7 +105,7 @@ Các mục tiêu chính của hệ thống bao gồm:
 * Góp phần giảm tỷ lệ hoàn trả sản phẩm do không phù hợp kiểu dáng hoặc phong cách.
 * Nâng cao tính cạnh tranh và khả năng tiếp cận khách hàng cho các cửa hàng thời trang nhỏ.
 
-### **2.2. Đối tượng sử dụng hệ thống**
+## 2.1. Đối tượng sử dụng hệ thống
 
 Hệ thống hướng đến các nhóm đối tượng chính sau:
 
@@ -117,7 +119,7 @@ Hệ thống hướng đến các nhóm đối tượng chính sau:
 
   Người quản lý toàn bộ hệ thống, giám sát người dùng, dữ liệu và hoạt động của website.
 
-### **2.3. Các chức năng chính của hệ thống**
+## 2.2. Các chức năng chính của hệ thống
 
 Hệ thống cung cấp các chức năng chính như sau:
 
@@ -128,7 +130,7 @@ Hệ thống cung cấp các chức năng chính như sau:
 * Quản lý người dùng hệ thống dành cho admin.
 * Thống kê và hiển thị biểu đồ khảo sát các mặt hàng được người dùng yêu thích.
 
-### **2.4. Phạm vi xây dựng hệ thống**
+## 2.3. Phạm vi xây dựng hệ thống
 
 Phạm vi của hệ thống trong khuôn khổ dự án bao gồm:
 
@@ -143,8 +145,6 @@ Phạm vi của hệ thống trong khuôn khổ dự án bao gồm:
    • Admin: quản lý users, nội dung (mẫu 3D, catalog), cấu hình tích hợp, dashboard khảo sát.
    • Integration Partner: đối tác bán hàng/e-commerce; cấp API key & định dạng dữ liệu.
    • Analytics/BI: hệ thống thu thập sự kiện, tổng hợp & vẽ biểu đồ.
-
-# 3. Các biểu đồ phân tích thiết kế hệ thống
 
 # 3. Các biểu đồ phân tích thiết kế hệ thống
 
@@ -238,7 +238,7 @@ Phạm vi của hệ thống trong khuôn khổ dự án bao gồm:
 
 `<img src="/images/UC_ShopProfile.png">`
 
-3.4.6. Usecase chức năng Chăm sóc khách hàng
+### 3.4.6. Usecase chức năng Chăm sóc khách hàng
 
 `<img src="/images/UC_CustomerService.png">`
 
@@ -535,7 +535,43 @@ Mối quan hệ sử dụng foreign keys (FK) để liên kết, đảm bảo t�
 
 `<img src="/images/AC_TimKiem.png">`
 
-## 3.7. Biểu đồ tuần tự của User
+### 3.6.5. Biểu đồ hoạt động chức năng đăng xuất
+
+`<img src="/images/AC_DangXuat.png">`
+
+### 3.6.6. Biểu đồ hoạt động chức năng thêm vào giỏ hàng
+
+`<img src="/images/AC_ThemSPvaogiohang.png">`
+
+### 3.6.7. Biểu đồ hoạt động chức năng xem chi tiết sản phẩm
+
+`<img src="/images/AC_XemChiTietSP.png">`
+
+### 3.6.8. Biểu đồ hoạt động chức năng lưu bộ trang phục
+
+`<img src="/images/AC_LuuOutfit.png">`
+
+### 3.6.9. Biểu đồ hoạt động chức năng quản lý sản phẩm Admin
+
+`<img src="/images/AC_QuanLySPcuaAdmin.png">`
+
+### 3.6.10. Biểu đồ hoạt động chức năng thanh toán
+
+`<img src="/images/AC_ThanhToan.png">`
+
+### 3.6.11. Biểu đồ hoạt động chức năng quản lý đơn hàng của User
+
+`<img src="/images/AC_QLDonHang.png">`
+
+### 3.6.12. Biểu đồ hoạt động chức năng quản lý thông tin cá nhân
+
+`<img src="/images/AC_QLThongTinCaNhanUser.png">`
+
+### 3.6.13. Biểu đồ hoạt động chức năng xem giỏ hàng
+
+`<img src="/images/AC_XemGioHang.png">`
+
+### 3.7. Biểu đồ tuần tự của User
 
 ### 3.7.1. Biểu đồ tuần tự Đăng kí tài khoản
 
@@ -574,32 +610,344 @@ Mối quan hệ sử dụng foreign keys (FK) để liên kết, đảm bảo t�
     `<img src="/images/SE_BaoLoi_3.png">`
 
 <<<<<<< HEAD
-## 3.8. BIểu đồ tuần tự của shop
 
-### 3.8.1. Biểu đồ tuần tự shop đăng kí cộng tác 
-
-`<img src="/images/SE_RegisterShop.png">`
-
-### 3.8.1. Biểu đồ tuần tự shop đẩy sản phẩm lên
-
-`<img src="/images/SE_DaySanPham.png">`
-=======
 ## 3.8. Biểu đồ tuần tự của Admin
 
 ### 3.8.1. Biểu đồ tuần tự thêm sản phẩm
 
-![1768805902778](image/pttk/1768805902778.png)
+`<img src="/images/SE_AddProduct.png">`
 
 ### 3.8.2. Biểu đồ tuần tự xem khiếu nại
 
-![1768805959311](image/pttk/1768805959311.png)
+`<img src="/images/SE_ViewReport.png">`
 
 ### 3.8.3. Biểu đồ tuần tự phê duyệt người bán
 
-![1768806004519](image/pttk/1768806004519.png)
+`<img src="/images/SE_RequestAccept.png">`
 
 
->>>>>>> 6c0febff5bb1f10290aca3cd89f96dff17b86726
+## 3.9. BIểu đồ tuần tự của shop
+
+### 3.9.1. Biểu đồ tuần tự shop đăng kí cộng tác
+
+`<img src="/images/SE_RegisterShop.png">`
+
+### 3.9.1. Biểu đồ tuần tự shop đẩy sản phẩm lên
+
+`<img src="/images/SE_DaySanPham.png">`
+
+### 3.9.3. Biểu đồ tuần tự shop quản lý đơn hàng
+
+`<img src="/images/SE_QuanLyDonHang.png">`
+
+# 4. Đặc tả Use Case
+
+## 4.1. Đặc tả Use Case chức năng User
+
+### 4.1.1. Đặc tả Use Case UC-01: Thử nghiệm quần áo 3D
+
+**Mã Use Case:** UC-01
+
+**Tên Use Case:** Thử nghiệm quần áo 3D
+
+**Actor chính:** User
+
+**Actor phụ:** Hệ thống 3D Engine
+
+**Mô tả:**
+
+Cho phép người dùng thử các sản phẩm thời trang trên mô hình cơ thể ảo thông qua công nghệ hiển thị 3D nhằm hỗ trợ quyết định mua sắm.
+
+**Điều kiện tiên quyết:**
+
+* Người dùng đã đăng nhập hệ thống
+* Người dùng đã thiết lập hồ sơ cơ thể hoặc chọn model mặc định
+
+**Luồng chính (Main Flow):**
+
+1. User chọn một sản phẩm từ danh sách
+2. Hệ thống tải mô hình 3D của sản phẩm
+3. Hệ thống hiển thị sản phẩm trên avatar
+4. User thao tác xoay, phóng to, thu nhỏ mô hình
+5. User tiếp tục thử các sản phẩm khác
+
+**Luồng thay thế (Alternative Flow):**
+
+* **3a:** Nếu mô hình 3D chưa có
+
+  → Hệ thống hiển thị hình ảnh 2D của sản phẩm
+
+**Luồng ngoại lệ (Exception Flow):**
+
+* **2e:** Lỗi tải mô hình 3D
+
+  → Hệ thống hiển thị thông báo lỗi và ghi nhận log
+
+**Hậu điều kiện:**
+
+* Lịch sử thử đồ được lưu lại cho người dùng
+
+### 4.1.2. Đặc tả Use Case UC-02: Tạo và lưu Outfit
+
+**Mã Use Case:** UC-02
+
+**Actor:** User
+
+**Mô tả:**
+
+Cho phép người dùng kết hợp nhiều sản phẩm đã thử thành một bộ trang phục hoàn chỉnh (outfit) và lưu lại để sử dụng sau.
+
+**Điều kiện tiên quyết:**
+
+* Người dùng đã đăng nhập
+* Đã thử ít nhất một sản phẩm
+
+**Luồng chính:**
+
+1. User chọn các sản phẩm muốn kết hợp
+2. Hệ thống kiểm tra xung đột loại trang phục
+3. User đặt tên cho outfit
+4. User chọn “Lưu outfit”
+5. Hệ thống lưu outfit vào cơ sở dữ liệu
+
+**Ràng buộc nghiệp vụ:**
+
+* Một outfit chỉ có tối đa một sản phẩm cho mỗi vị trí (áo, quần, giày…)
+* Sản phẩm phải phù hợp giới tính của avatar
+
+**Hậu điều kiện:**
+
+* Outfit được lưu và hiển thị trong danh sách cá nhân
+
+### 4.1.3. Đặc tả Use Case UC-03: Chọn kích thước cơ thể
+
+**Mã Use Case:** UC-03
+
+**Actor:** User
+
+**Mô tả:**
+
+Cho phép người dùng nhập và điều chỉnh các thông số cơ thể để tăng độ chính xác khi thử đồ 3D.
+
+Luồng chính:
+
+1. User nhập chiều cao và cân nặng
+2. User nhập số đo chi tiết (vai, eo, hông)
+3. Hệ thống cập nhật avatar tương ứng
+4. User xác nhận lưu hồ sơ cơ thể
+
+**Luồng thay thế:**
+
+* **1a:** User chọn profile có sẵn
+
+  → Hệ thống hiển thị avatar mặc định
+
+**Hậu điều kiện:**
+
+* Hồ sơ cơ thể được lưu và áp dụng cho các lần thử đồ sau
+
+### 4.1.4. Đặc tả Use Case UC-04: Báo lỗi
+
+**Mã Use Case:** UC-04
+
+**Actor chính:** User
+
+**Actor phụ:** Admin / Seller
+
+**Mô tả:**
+
+Cho phép người dùng gửi phản hồi hoặc báo lỗi khi gặp sự cố trong quá trình sử dụng hệ thống.
+
+**Luồng chính:**
+
+1. User chọn chức năng “Báo lỗi”
+2. Nhập nội dung mô tả lỗi
+3. Đính kèm hình ảnh (nếu có)
+4. Gửi yêu cầu
+5. Hệ thống tạo ticket và thông báo xác nhận
+
+**Trạng thái ticket:**
+
+* Mới tạo
+* Đang xử lý
+* Đã hoàn thành
+
+**Hậu điều kiện:**
+
+* Ticket được lưu và hiển thị trong hệ thống quản lý
+
+## 4.2. Đặc tả Use Case chức năng Seller
+
+### 4.2.5. Đặc tả Use Case: Quản lý sản phẩm
+
+**Mã Use Case:** UC-05
+
+**Tên Use Case:** Quản lý sản phẩm
+
+**Actor chính:** Seller
+
+**Actor phụ:** Hệ thống
+
+**Mô tả:**
+Cho phép người bán (Seller) thực hiện các thao tác thêm mới, cập nhật thông tin, xóa hoặc ẩn các sản phẩm thời trang trong gian hàng của mình, bao gồm cả việc tải lên các mô hình 3D (nếu có).
+
+**Điều kiện tiên quyết:**
+
+* Seller đã đăng nhập vào hệ thống quản trị.
+* Seller đã đăng ký gian hàng thành công.
+
+**Luồng chính (Main Flow):**
+
+1. Seller chọn chức năng "Quản lý sản phẩm".
+2. Hệ thống hiển thị danh sách sản phẩm hiện có.
+3. Seller chọn "Thêm sản phẩm mới" hoặc chọn một sản phẩm để "Chỉnh sửa".
+4. Seller nhập/cập nhật thông tin chi tiết (Tên, giá, mô tả, ảnh 2D, file mô hình 3D, tồn kho).
+5. Seller nhấn "Lưu".
+6. Hệ thống kiểm tra tính hợp lệ của dữ liệu.
+7. Hệ thống lưu thông tin vào cơ sở dữ liệu và thông báo thành công.
+
+**Luồng thay thế (Alternative Flow):**
+
+* **3a: Xóa/Ẩn sản phẩm**
+  1. Seller chọn sản phẩm cần xóa/ẩn.
+  2. Hệ thống yêu cầu xác nhận.
+  3. Seller xác nhận. -> Hệ thống cập nhật trạng thái sản phẩm.
+
+**Luồng ngoại lệ (Exception Flow):**
+
+* **6e: Dữ liệu không hợp lệ** (Ví dụ: File 3D sai định dạng, thiếu giá tiền)
+  -> Hệ thống hiển thị thông báo lỗi cụ thể tại trường thông tin bị sai và yêu cầu nhập lại.
+
+**Hậu điều kiện:**
+
+* Thông tin sản phẩm được cập nhật và hiển thị trên ứng dụng cho User (người mua) xem và thử đồ.
+
+### 4.2.6. Đặc tả Use Case: Quản lý đơn hàng
+
+**Mã Use Case:** UC-06
+
+**Tên Use Case:** Quản lý đơn hàng
+
+**Actor chính:** Seller
+
+**Actor phụ:** User (Người mua)
+
+**Mô tả:**
+Cho phép Seller theo dõi, tiếp nhận, xác nhận và cập nhật trạng thái xử lý các đơn hàng được đặt bởi người dùng.
+
+**Điều kiện tiên quyết:**
+
+* Có đơn hàng mới hoặc đơn hàng đang xử lý trong hệ thống.
+
+**Luồng chính:**
+
+1. Seller truy cập danh sách đơn hàng.
+2. Hệ thống hiển thị các đơn hàng phân loại theo trạng thái (Chờ xác nhận, Đang giao, Đã giao...).
+3. Seller chọn một đơn hàng cụ thể để xem chi tiết.
+4. Seller thực hiện cập nhật trạng thái (Ví dụ: Chuyển từ "Chờ xác nhận" sang "Đang chuẩn bị hàng").
+5. Hệ thống lưu trạng thái mới và gửi thông báo cập nhật cho User.
+
+**Luồng thay thế:**
+
+* **4a: Hủy đơn hàng**
+  1. Seller chọn hủy đơn (do hết hàng hoặc lý do khác).
+  2. Seller nhập lý do hủy.
+  3. Hệ thống cập nhật trạng thái "Đã hủy" và hoàn tiền (nếu có) theo quy trình.
+
+**Hậu điều kiện:**
+
+* Trạng thái đơn hàng được đồng bộ hóa giữa Seller và User.
+
+### 4.2.7. Đặc tả Use Case: Báo cáo, thống kê
+
+**Mã Use Case:** UC-07
+
+**Tên Use Case:** Báo cáo, thống kê
+
+**Actor:** Seller
+
+**Mô tả:**
+Cung cấp cho Seller cái nhìn tổng quan về hiệu quả kinh doanh thông qua các biểu đồ và số liệu về doanh thu, số lượng sản phẩm bán ra, và lượt tương tác (thử đồ 3D).
+
+**Điều kiện tiên quyết:**
+
+* Gian hàng đã có dữ liệu hoạt động (giao dịch, lượt xem).
+
+**Luồng chính:**
+
+1. Seller chọn chức năng "Báo cáo & Thống kê".
+2. Seller chọn khoảng thời gian cần xem (Ngày, Tuần, Tháng, Tùy chỉnh).
+3. Seller chọn loại báo cáo (Doanh thu, Sản phẩm bán chạy, Tỷ lệ chuyển đổi từ thử đồ 3D sang mua).
+4. Hệ thống tính toán và hiển thị biểu đồ/bảng số liệu tương ứng.
+
+**Luồng thay thế:**
+
+* **4a: Xuất dữ liệu**
+  -> Seller chọn "Xuất Excel" để tải file báo cáo về máy.
+
+**Hậu điều kiện:**
+
+* Seller nắm được thông tin để điều chỉnh chiến lược kinh doanh.
+
+### 4.2.8. Đặc tả Use Case: Quản lý Hồ sơ Shop
+
+**Mã Use Case:** UC-08
+
+**Actor:** Seller
+
+**Mô tả:**
+Cho phép Seller thiết lập và chỉnh sửa thông tin hiển thị của gian hàng để tạo thương hiệu và uy tín với khách hàng.
+
+**Luồng chính:**
+
+1. Seller chọn "Hồ sơ Shop".
+2. Hệ thống hiển thị thông tin hiện tại (Logo, Tên shop, Ảnh bìa, Địa chỉ, Mô tả, Chính sách).
+3. Seller chọn "Chỉnh sửa".
+4. Seller thay đổi các thông tin mong muốn.
+5. Seller nhấn "Lưu thay đổi".
+6. Hệ thống cập nhật thông tin hiển thị của Shop.
+
+**Luồng ngoại lệ:**
+
+* **5e: Ảnh không đúng kích thước/định dạng**
+  -> Hệ thống báo lỗi và yêu cầu tải lên ảnh phù hợp.
+
+**Hậu điều kiện:**
+
+* Thông tin mới của Shop được cập nhật trên giao diện người dùng.
+
+### 4.2.9. Đặc tả Use Case: Chăm sóc khách hàng
+
+**Mã Use Case:** UC-09
+
+**Actor chính:** Seller
+
+**Actor phụ:** User
+
+**Mô tả:**
+Cho phép Seller giao tiếp trực tiếp với khách hàng thông qua hệ thống chat hoặc phản hồi các đánh giá/bình luận về sản phẩm.
+
+**Điều kiện tiên quyết:**
+
+* Có tin nhắn từ khách hàng hoặc có đánh giá mới về sản phẩm.
+
+**Luồng chính (Phản hồi tin nhắn):**
+
+1. Seller nhận thông báo có tin nhắn mới.
+2. Seller mở hộp thoại chat.
+3. Seller xem nội dung và nhập tin nhắn trả lời.
+4. Seller nhấn "Gửi".
+5. Hệ thống chuyển tin nhắn đến User.
+
+**Luồng thay thế (Phản hồi đánh giá):**
+
+* **1a:** Seller xem danh sách đánh giá sản phẩm.
+* **2a:** Seller chọn một đánh giá và nhập nội dung phản hồi.
+* **3a:** Hệ thống hiển thị phản hồi của Seller công khai dưới đánh giá của User.
+
+**Hậu điều kiện:**
+
+* Giải đáp được thắc mắc của khách hàng hoặc ghi nhận phản hồi.
 
 # PHÂN TÍCH & THIẾT KẾ HỆ THỐNG
 
