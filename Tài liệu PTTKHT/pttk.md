@@ -172,7 +172,7 @@ Phạm vi của hệ thống trong khuôn khổ dự án bao gồm:
 
 `<img src="/images/UC_QuanLyNguoiBan.png">`
 
-### 3.2.5. Biểu đồ Usecase quản lý người dùng
+### 3.2.6. Biểu đồ Usecase quản lý người dùng
 
 `<img src="/images/UC_QuanLyNguoiDung.png">`
 
@@ -625,7 +625,6 @@ Mối quan hệ sử dụng foreign keys (FK) để liên kết, đảm bảo t�
 
 `<img src="/images/SE_RequestAccept.png">`
 
-
 ## 3.9. BIểu đồ tuần tự của shop
 
 ### 3.9.1. Biểu đồ tuần tự shop đăng kí cộng tác
@@ -949,7 +948,120 @@ Cho phép Seller giao tiếp trực tiếp với khách hàng thông qua hệ th
 
 * Giải đáp được thắc mắc của khách hàng hoặc ghi nhận phản hồi.
 
-# PHÂN TÍCH & THIẾT KẾ HỆ THỐNG
+## 4.3. Đặc tả Use Case chức năng Admin
+
+### 4.3.10. Đặc tả Use Case: Quản lý người bán
+
+**Mã Use Case:** UC-10
+**Actor chính:** Admin
+**Actor phụ:** Không có
+**Mô tả:** Cho phép Admin xem danh sách đăng ký, kiểm tra hồ sơ và thực hiện phê duyệt hoặc từ chối các tài khoản muốn trở thành người bán trên hệ thống.
+
+**Điều kiện tiên quyết:**
+
+* Admin đã đăng nhập thành công vào trang quản trị.
+
+**Luồng chính (Phê duyệt người bán):**
+
+1. Admin chọn chức năng "Quản lý người bán".
+2. Hệ thống hiển thị danh sách các yêu cầu đăng ký đang chờ xử lý.
+3. Admin chọn một yêu cầu để xem chi tiết hồ sơ (bao gồm thông tin cá nhân, giấy phép kinh doanh, v.v.).
+4. Admin nhấn nút "Phê duyệt".
+5. Hệ thống cập nhật trạng thái "Đã duyệt" và gửi thông báo kích hoạt tài khoản cho Seller.
+
+**Luồng thay thế (Từ chối người bán):**
+
+* **4a:** Admin nhấn nút "Từ chối".
+* **4b:** Hệ thống yêu cầu Admin nhập lý do từ chối (ví dụ: hồ sơ thiếu thông tin).
+* **5a:** Hệ thống gửi thông báo từ chối kèm lý do cho người đăng ký.
+
+**Hậu điều kiện:**
+
+* Tài khoản Seller được kích hoạt hoặc yêu cầu bị hủy bỏ trong cơ sở dữ liệu.
+
+### 4.3.11. Đặc tả Use Case: Thiết lập hệ thống
+
+**Mã Use Case:** UC-11
+**Actor chính:** Admin
+**Actor phụ:** Không có
+**Mô tả:** Cho phép Admin thay đổi các thông số vận hành của hệ thống như chiết khấu, trạng thái bảo trì hoặc tự động hóa quy trình.
+
+**Điều kiện tiên quyết:**
+
+* Admin có quyền quản trị cấp cao nhất.
+
+**Luồng chính (Cấu hình chiết khấu):**
+
+1. Admin truy cập mục "Thiết lập hệ thống".
+2. Admin chọn phần "Cấu hình chiết khấu".
+3. Admin nhập tỷ lệ phần trăm chiết khấu mới cho các giao dịch.
+4. Admin nhấn "Lưu cài đặt".
+5. Hệ thống xác nhận lưu thành công và áp dụng tỷ lệ mới cho các đơn hàng sau đó.
+
+**Luồng thay thế (Bật chế độ bảo trì/Tự động duyệt):**
+
+* **1a:** Admin chọn "Bật chế độ bảo trì" khi cần nâng cấp. Hệ thống sẽ tạm khóa các tính năng mua sắm của người dùng.
+* **1b:** Admin chọn "Tự động duyệt người bán". Hệ thống sẽ tự động chấp nhận các Seller thỏa mãn điều kiện quy định mà không cần Admin kiểm tra tay.
+
+**Hậu điều kiện:**
+
+* Các tham số hệ thống được cập nhật đồng bộ trên toàn website.
+
+### 4.3.12. Đặc tả Use Case: Quản lý đơn hàng
+
+**Mã Use Case:** UC-12
+**Actor chính:** Admin
+**Actor phụ:** Seller, User
+**Mô tả:** Admin theo dõi lộ trình đơn hàng, xác nhận đơn và xử lý các trạng thái vận chuyển.
+
+**Điều kiện tiên quyết:**
+
+* Có đơn hàng mới được tạo từ phía User.
+
+**Luồng chính (Xác nhận và cập nhật đơn):**
+
+1. Admin truy cập danh sách đơn hàng.
+2. Admin chọn xem chi tiết một đơn hàng cụ thể.
+3. Admin nhấn "Xác nhận đơn".
+4. Sau khi hàng được bàn giao cho bên vận chuyển, Admin chọn "Cập nhật trạng thái" thành "Đang giao".
+5. Hệ thống gửi thông báo hành trình đơn hàng cho User.
+
+**Luồng thay thế (Hủy đơn hàng):**
+
+* **3a:** Nếu phát hiện đơn hàng ảo hoặc Seller báo hết hàng, Admin nhấn "Hủy đơn".
+* **4a:** Admin nhập lý do hủy.
+* **5a:** Hệ thống hoàn lại tiền (nếu đã thanh toán) và thông báo cho các bên.
+
+**Hậu điều kiện:**
+
+* Trạng thái đơn hàng được cập nhật chính xác để User theo dõi.
+
+### 4.3.13. Đặc tả Use Case: Quản lý mẫu sản phẩm 3D
+
+**Mã Use Case:** UC-13
+**Actor chính:** Admin
+**Actor phụ:** Không có
+**Mô tả:** Admin thực hiện quản lý kho dữ liệu mẫu sản phẩm 3D dùng chung trên hệ thống.
+
+**Điều kiện tiên quyết:**
+
+* Admin có tệp tin định dạng 3D hợp lệ (obj, fbx, v.v.).
+
+**Luồng chính (Thêm mẫu mới):**
+
+1. Admin chọn "Quản lý mẫu sản phẩm 3D".
+2. Admin nhấn "Thêm mẫu".
+3. Admin tải tệp 3D lên và nhập tên/mô tả mẫu.
+4. Hệ thống kiểm tra định dạng và lưu vào thư viện mẫu.
+
+**Luồng thay thế (Cập nhật hoặc Xóa mẫu):**
+
+* **1a:** Admin chọn một mẫu 3D hiện có trong danh sách.
+* **2a:** Admin chọn "Cập nhật" để thay đổi tệp mới hoặc "Xóa" để loại bỏ mẫu khỏi hệ thống.
+
+**Hậu điều kiện:**
+
+* Thư viện mẫu 3D được cập nhật để Seller có thể sử dụng khi đăng sản phẩm.
 
 ## 5. Phân tích hệ thống (System Analysis)
 
