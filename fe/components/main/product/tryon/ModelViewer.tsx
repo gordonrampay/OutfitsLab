@@ -85,7 +85,6 @@ function materializeScene(scene: THREE.Object3D, colors: Colors, patterns: Patte
   })
 }
 
-/* ---------------- Body & Garment ---------------- */
 
 function BodyModel({ url }: { url: string }) {
   const gltf: GLTF = useLoader(GLTFLoader, url)
@@ -107,7 +106,6 @@ function Garment({ url }: { url: string }) {
   return <primitive object={gltf.scene} />
 }
 
-/* ---------------- Viewer ---------------- */
 
 export default function ModelViewer() {
   const { autoRotate, background, modelId, activeGarments } = useCustomizer()
@@ -124,7 +122,7 @@ export default function ModelViewer() {
   const bodyUrl = BODY_MODELS[modelId]
 
   return (
-    <div className="relative rounded-xl bg-white p-2 shadow">
+    <div className="relative rounded-xl h-[400px] bg-white p-2 shadow">
       <Canvas shadows camera={{ position: [0, 1.2, 3.2], fov: 40 }} dpr={[1, 2]}>
         <color attach="background" args={[bgColor]} />
         <Suspense fallback={null}>

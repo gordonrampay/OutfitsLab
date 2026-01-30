@@ -14,12 +14,12 @@ export default function Sidebar() {
   const setGender = useCustomizer((s) => s.setGender)
 
   return (
-    <aside className="h-fit w-full rounded-xl bg-white p-4 shadow">
-      <div className="mb-4 flex items-center justify-between">
-        <div className="text-lg font-semibold">Model</div>
+    <div className="h-fit w-full rounded-lg bg-white p-6 shadow-lg border border-gray-300">
+      <div className="mb-6 flex items-center justify-between">
+        <div className="text-lg font-semibold text-gray-800">Model</div>
         <div className="flex gap-2">
           <button
-            className={`inline-flex items-center gap-1 rounded-full px-3 py-1 text-sm ${gender === 'female' ? 'bg-black text-white' : 'bg-gray-100 text-gray-700'}`}
+            className={`inline-flex items-center gap-1 rounded-full px-4 py-2 text-sm transition-colors duration-300 ${gender === 'female' ? 'bg-teal-500 text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}
             onClick={() => setGender('female')}
             title="Female"
           >
@@ -27,7 +27,7 @@ export default function Sidebar() {
             <span className="hidden sm:inline">Female</span>
           </button>
           <button
-            className={`inline-flex items-center gap-1 rounded-full px-3 py-1 text-sm ${gender === 'male' ? 'bg-black text-white' : 'bg-gray-100 text-gray-700'}`}
+            className={`inline-flex items-center gap-1 rounded-full px-4 py-2 text-sm transition-colors duration-300 ${gender === 'male' ? 'bg-teal-500 text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}
             onClick={() => setGender('male')}
             title="Male"
           >
@@ -41,25 +41,39 @@ export default function Sidebar() {
         <ModelSelector />
         <OutfitSelector />
 
-        <ColorSwatches part="skin" label="Skin color" />
-        <ColorSwatches part="top" label="Top color" />
-        <PatternPicker target="top" />
-        <ColorSwatches part="bottom" label="Bottom color" />
-        <PatternPicker target="bottom" />
-        <ColorSwatches part="shoes" label="Shoes color" />
+        <div className="border-t border-gray-300 pt-4">
+          <div className="text-lg font-semibold text-gray-800">Colors</div>
+          <ColorSwatches part="skin" label="Skin color" />
+          <ColorSwatches part="top" label="Top color" />
+          <ColorSwatches part="bottom" label="Bottom color" />
+          <ColorSwatches part="shoes" label="Shoes color" />
+        </div>
 
-        <BackgroundPicker />
-        <SizePicker />
+        <div className="border-t border-gray-300 pt-4">
+          <div className="text-lg font-semibold text-gray-800">Pattern</div>
+          <PatternPicker target="top" />
+          <PatternPicker target="bottom" />
+        </div>
 
-        <div className="flex gap-2 pt-2">
-          <button className="flex-1 inline-flex items-center justify-center gap-2 rounded-md bg-orange-500 px-4 py-2 font-medium text-white shadow hover:opacity-90">
+        <div className="border-t border-gray-300 pt-4">
+          <div className="text-lg font-semibold text-gray-800">Background</div>
+          <BackgroundPicker />
+        </div>
+
+        <div className="border-t border-gray-300 pt-4">
+          <div className="text-lg font-semibold text-gray-800">Size</div>
+          <SizePicker />
+        </div>
+
+        <div className="flex gap-2 pt-4">
+          <button className="flex-1 inline-flex items-center justify-center gap-2 rounded-md bg-teal-600 px-4 py-2 font-medium text-white shadow hover:bg-teal-500">
             <SaveOutlined /> Save
           </button>
-          <button className="flex-1 inline-flex items-center justify-center gap-2 rounded-md border border-gray-300 bg-white px-4 py-2 font-medium text-gray-700">
+          <button className="flex-1 inline-flex items-center justify-center gap-2 rounded-md border border-gray-300 bg-white px-4 py-2 font-medium text-gray-700 hover:bg-gray-100 transition duration-200">
             <PlusOutlined /> Add
           </button>
         </div>
       </div>
-    </aside>
+    </div>
   )
 }

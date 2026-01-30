@@ -6,7 +6,6 @@ import { useRef, useMemo } from 'react'
 
 type Item = { id: string; title: string; price: number }
 
-// Lưu ý: KHÔNG còn trường 'img' để tránh request tới /placeholder/*.png
 const ITEMS: ReadonlyArray<Item> = [
   { id: '1', title: 'Cotton Pajamas',     price: 26 },
   { id: '2', title: 'Green Cotton Shirt',  price: 28 },
@@ -15,7 +14,6 @@ const ITEMS: ReadonlyArray<Item> = [
   { id: '5', title: 'Relax Tee',           price: 20 },
 ]
 
-// Tạo SVG placeholder dạng data URL -> không cần file vật lý, không 404
 function svgPlaceholder(w: number, h: number, text = 'No image') {
   const svg = `
     <svg width="${w}" height="${h}" xmlns="http://www.w3.org/2000/svg">
@@ -42,9 +40,9 @@ export default function OutfitCarousel() {
   }
 
   return (
-    <section className="relative rounded-xl bg-white p-4 shadow">
+    <section className="relative rounded-xl bg-white p-4 shadow mt-20">
       <div className="mb-3 flex items-center justify-between">
-        <h3 className="text-lg font-semibold">Recommended Outfit Combinations</h3>
+        <h3 className="text-lg font-semibold text-black">Recommended Outfit Combinations</h3>
         <div className="hidden gap-2 md:flex">
           <button
             onClick={() => scrollBy(-280)}
@@ -71,7 +69,7 @@ export default function OutfitCarousel() {
         <style jsx>{`div::-webkit-scrollbar { display: none; }`}</style>
 
         {ITEMS.map((i) => (
-          <article key={i.id} className="min-w-[180px] max-w-[200px] rounded-lg border bg-white p-3 shadow-sm">
+          <article key={i.id} className="min-w-[200px] max-w-[250px] rounded-lg border bg-white p-3 shadow-sm">
             <div className="mb-2 h-28 w-full overflow-hidden rounded-md bg-gray-100">
               <Image
                 src={ph240x120}
