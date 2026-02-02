@@ -1,9 +1,18 @@
+import { Module } from '@nestjs/common';
+import { TypeOrmModule } from '@nestjs/typeorm';
+
 @Module({
   imports: [
-    ConfigModule,
-    AuthModule,
-    UsersModule,
-    HealthModule,
+    TypeOrmModule.forRoot({
+      type: 'postgres',
+      host: 'localhost',
+      port: 5432,
+      username: 'postgres',
+      password: '123456',
+      database: 'outfitslab_db',
+      autoLoadEntities: true,
+      synchronize: true, 
+    }),
   ],
 })
 export class AppModule {}
