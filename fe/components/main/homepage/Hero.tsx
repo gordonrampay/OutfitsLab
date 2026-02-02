@@ -1,73 +1,78 @@
+// components/main/homepage/Hero.tsx
+"use client";
 import { ShoppingOutlined, AppstoreOutlined, PlayCircleOutlined } from "@ant-design/icons";
 import Link from "next/link";
 import ThreeCard from "./ThreeCard";
 
 export default function Hero() {
   return (
-    <section className="pt-16 pb-14 md:pb-20">
-      {/* flex dọc -> ngang; gap tách riêng theo trục */}
-      <div className="flex flex-col md:flex-row items-center md:items-stretch gap-y-10 md:gap-y-0 md:gap-x-10">
+    <section className="w-full pb-20 mt-16">
+      {/* Grid layout với khoảng cách rộng hơn */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-20 items-center">
         
-        {/* Left */}
-        <div className="min-w-0 basis-full md:basis-1/2 grow md:grow-0">
-          <div className="text-xs text-slate-500 mb-3">
-            <span
-              className="inline-block px-2 py-1"
+        {/* Left Column */}
+        <div className="flex flex-col justify-center space-y-8">
+          {/* Badge */}
+          <div>
+            <span 
+              className="inline-block px-4 py-2 text-lg font-bold rounded-full text-slate-800"
               style={{
-                background: "rgba(255,255,255,.7)",
-                backdropFilter: "blur(6px)",
-                border: "1px solid rgba(255,255,255,.6)",
-                borderRadius: 999,
-                boxShadow: "inset 0 1px 0 rgba(255,255,255,.6)",
+                background: "rgba(255,255,255,.85)",
+                backdropFilter: "saturate(150%) blur(12px)",
+                boxShadow: "0 4px 12px rgba(0,0,0,.08), inset 0 1px 0 rgba(255,255,255,.8)",
+                border: "1px solid rgba(255,255,255,.8)",
               }}
             >
               🎨 Nền tảng Custom Outfit 3D
             </span>
           </div>
 
-          <h1 className="text-4xl md:text-6xl font-extrabold leading-tight">
-            Khám Phá Outfit <span className="text-slate-900">Hoàn Hảo</span>
-            <br />
-            <span className="text-emerald-600">Với CustomOutfit3D</span>
+          {/* Heading với spacing tốt hơn */}
+          <h1 className="text-5xl md:text-7xl font-extrabold leading-tight text-slate-900">
+            Khám Phá Outfit{" "}
+            <span className="block mt-2">Hoàn Hảo</span>
+            <span className="block mt-3 text-emerald-600">
+              Với CustomOutfit3D
+            </span>
           </h1>
 
-          <p className="mt-4 text-slate-600 max-w-xl">
+          {/* Description với line-height tốt hơn */}
+          <p className="text-slate-600 max-w-xl text-xl leading-relaxed">
             Trải nghiệm thử đồ ảo trên avatar 3D của bạn với cảm giác chân thực — chỉnh màu,
             vải và phụ kiện chỉ bằng vài cú nhấp!
           </p>
 
-          <div className="mt-6 flex flex-wrap gap-3">
+          {/* Buttons - đầy đặn hơn với padding lớn hơn */}
+          <div className="flex flex-wrap gap-5">
             <Link
               href="/try-on"
-              className="inline-flex items-center gap-2 px-4 py-3 rounded-full bg-emerald-500 text-white hover:bg-emerald-600"
+              className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-emerald-500 to-emerald-600 text-white hover:from-emerald-600 hover:to-emerald-700 font-semibold text-lg transition-all hover:shadow-xl hover:scale-105 active:scale-100"
             >
-              <ShoppingOutlined /> Bắt đầu thử Outfit
+              <ShoppingOutlined className="text-xl" /> 
+              Bắt đầu thử Outfit
             </Link>
 
             <Link
               href="/catalog"
-              className="inline-flex items-center gap-2 px-4 py-3 rounded-full border border-emerald-200 text-emerald-700 bg-white/80 hover:bg-white"
+              className="inline-flex items-center gap-3 px-8 py-4 rounded-full border-2 border-emerald-300 text-emerald-700 bg-white hover:bg-emerald-50 font-semibold text-lg transition-all hover:shadow-lg hover:border-emerald-400"
             >
-              <AppstoreOutlined /> Khám phá Catalog
+              <AppstoreOutlined className="text-xl" /> 
+              Khám phá Catalog
             </Link>
 
             <a
               href="https://youtu.be/"
               target="_blank"
-              className="inline-flex items-center gap-2 px-4 py-3 rounded-full"
-              style={{
-                background: "rgba(255,255,255,.72)",
-                backdropFilter: "saturate(150%) blur(12px)",
-                boxShadow: "0 10px 30px rgba(0,0,0,.06), inset 0 1px 0 rgba(255,255,255,.6)",
-                border: "1px solid rgba(255,255,255,.6)",
-              }}
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 px-8 py-4 rounded-full font-semibold text-lg hover:bg-slate-100 transition-all text-slate-700 hover:text-emerald-600"
             >
-              <PlayCircleOutlined /> Xem demo
+              <PlayCircleOutlined className="text-xl" /> 
+              Xem demo
             </a>
           </div>
 
-          {/* Stats */}
-          <div className="mt-7 grid grid-cols-3 gap-4 text-sm">
+          {/* Stats - spacing tốt hơn */}
+          <div className="grid grid-cols-3 gap-6 mt-12">
             {[
               { v: "10K+", l: "Mẫu Outfit" },
               { v: "500+", l: "Seller tham gia" },
@@ -75,48 +80,37 @@ export default function Hero() {
             ].map((s, i) => (
               <div
                 key={i}
-                className="p-3 text-center"
+                className="p-5 text-center transition-all hover:scale-105"
                 style={{
-                  background: "rgba(255,255,255,.72)",
+                  background: "rgba(255,255,255,.75)",
                   backdropFilter: "saturate(150%) blur(12px)",
                   boxShadow: "0 10px 30px rgba(0,0,0,.06), inset 0 1px 0 rgba(255,255,255,.6)",
-                  border: "1px solid rgba(255,255,255,.6)",
-                  borderRadius: 22,
+                  border: "1px solid rgba(255,255,255,.7)",
+                  borderRadius: 24,
                 }}
               >
-                <div className="text-xl font-bold">{s.v}</div>
-                <div className="text-slate-500">{s.l}</div>
+                <div className="text-3xl font-bold text-emerald-600 mb-2">{s.v}</div>
+                <div className="text-slate-600 text-sm font-medium">{s.l}</div>
               </div>
             ))}
           </div>
         </div>
 
-        {/* Right */}
-        <div className="min-w-0 basis-full md:basis-1/2 grow md:grow-0 flex justify-center">
-          <ThreeCard
-            className="w-full max-w-[520px]"   // 👈 parent kiểm soát kích thước card
-            badgeLabel="Avatar 3D"
-            tag="Male v1.0 • GLB"
-            modelUrl="/model/body/avatar_male.glb"
-            scale={1.0}
-            position={[0, -0.9, 0]}
-            rotation={[0, Math.PI, 0]}
-          />
+        {/* Right Column - 3D Card */}
+        <div className="flex items-center justify-center">
+          <div className="w-full max-w-[550px]">
+            <ThreeCard
+              className="w-full h-[650px]"
+              badgeLabel="Avatar 3D"
+              tag="Male v1.0 • GLB"
+              modelUrl="/model/body/avatar_male.glb"
+              scale={1.0}
+              position={[0, -0.9, 0]}
+              rotation={[0, Math.PI, 0]}
+            />
+          </div>
         </div>
       </div>
-
-      {/* Nút tròn nổi (ví dụ chat/contact) */}
-      <a
-        href="/contact"
-        className="fixed right-6 bottom-6 w-12 h-12 grid place-content-center rounded-full text-white"
-        style={{
-          background: "linear-gradient(135deg, #f87171, #ef4444)",
-          boxShadow: "0 8px 24px rgba(0,0,0,.15)",
-        }}
-        aria-label="Liên hệ"
-      >
-        ●
-      </a>
     </section>
   );
 }

@@ -13,7 +13,6 @@ import * as THREE from 'three';
 import React, { Suspense } from 'react';
 
 type ThreeSceneProps = {
-  /** Đường dẫn model GLB/Gltf (trong public/) */
   modelUrl?: string;
   /** scale tổng thể của model */
   scale?: number;
@@ -48,7 +47,6 @@ function Model({
 }) {
   const { scene } = useGLTF(url);
 
-  // Bật nhận/đổ bóng cho tất cả Mesh
   scene.traverse((obj) => {
     if (obj instanceof THREE.Mesh) {
       obj.castShadow = true;
@@ -76,7 +74,7 @@ export default function ThreeScene({
   position = [0, -0.9, 0],
   rotation = [0, Math.PI, 0],
   controls = true,
-  zoomLimits = [2.2, 5.5],
+  zoomLimits = [1.8, 4.5], // ✅ Giảm minDistance để zoom gần hơn
   polarLimits = [Math.PI / 3, Math.PI / 2],
   enableShadows = false,
   className,
@@ -86,10 +84,10 @@ export default function ThreeScene({
     // Wrapper cần có kích thước (w/h) từ parent; ở đây ta chắc chắn Canvas fill 100%
     <div className={className} style={style}>
       <Canvas
-        // để Canvas fill khối bao, dùng w-full h-full ở parent; thêm override class cho chắc
         className="!w-full !h-full"
         gl={{ antialias: true }}
-        camera={{ position: [2.2, 1.6, 2.6], fov: 40 }}
+        // ✅ Camera gần hơn và FOV rộng hơn để model to hơn
+        camera={{ position: [0, 0.3, 1.8], fov: 45 }}
         onCreated={(state) => {
           state.gl.setClearColor(new THREE.Color('#ffffff'), 0); // nền trong suốt
         }}

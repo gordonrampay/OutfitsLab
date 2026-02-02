@@ -1,41 +1,26 @@
-// components/main/homepage/ThreeCard.tsx
+
 "use client";
 
 import dynamic from "next/dynamic";
 import { AppstoreOutlined } from "@ant-design/icons";
 import React from "react";
 
-// Dynamic import để tắt SSR cho Canvas (bắt buộc với three.js ở Next App Router)
 const ThreeScene = dynamic(() => import("./ThreeScene"), { ssr: false });
 
 type ThreeCardProps = {
-  /** Cho phép truyền className để điều khiển kích thước từ bên ngoài (w/h, max-w, responsive…) */
   className?: string;
-  /** Nhãn badge nổi góc trên phải */
   badgeLabel?: string;
-  /** Tag nhỏ góc trái dưới */
   tag?: string;
-
-  /** Đường dẫn model 3D trong public/ */
   modelUrl?: string;
-  /** scale tổng thể của model */
   scale?: number;
-  /** vị trí [x,y,z] của model */
   position?: [number, number, number];
-  /** góc quay [x,y,z] radians của model */
   rotation?: [number, number, number];
-
-  /** Bật/tắt OrbitControls trong ThreeScene */
   controls?: boolean;
-  /** Giới hạn zoom [min, max] trong ThreeScene */
   zoomLimits?: [number, number];
-  /** Giới hạn góc dọc (polar) [min, max] trong ThreeScene */
   polarLimits?: [number, number];
-  /** Bật/tắt shadows trong ThreeScene */
   enableShadows?: boolean;
 };
 
-/** Tiện ích gộp className mà không cần cài thêm clsx */
 function cx(...args: Array<string | undefined | false>) {
   return args.filter(Boolean).join(" ");
 }
@@ -55,10 +40,7 @@ export default function ThreeCard({
 }: ThreeCardProps) {
   return (
     <div
-      // 👉 KHÔNG ép width cứng ở đây.
-      // Hãy truyền từ ngoài: ví dụ "w-full max-w-[520px] h-[520px]"
-      className={cx("relative w-full p-4", className)}
-      // Glass card (không cần CSS global)
+      className={cx("relative p-4", className)}
       style={{
         background: "rgba(255,255,255,.72)",
         backdropFilter: "saturate(150%) blur(12px)",
@@ -68,10 +50,9 @@ export default function ThreeCard({
         borderRadius: 22,
       }}
     >
-      {/* Region chứa Canvas – phải có kích thước cụ thể để Canvas fill */}
-      <div className="w-full h-full rounded-[18px] overflow-hidden">
+      <div className="w-full h-full rounded-[18px] overflow-hidden relative">
         <ThreeScene
-          className="w-full h-full"         // Canvas fill toàn bộ khung
+          className="w-full h-full"
           modelUrl={modelUrl}
           scale={scale}
           position={position}
@@ -83,9 +64,8 @@ export default function ThreeCard({
         />
       </div>
 
-      {/* Badge góc phải */}
       <div
-        className="absolute top-4 right-4 flex items-center gap-2 px-3 py-2 text-sm"
+        className="absolute top-6 right-6 flex items-center gap-2 px-3 py-2 text-sm text-emerald-700"
         style={{
           background: "rgba(255,255,255,.9)",
           backdropFilter: "blur(8px)",
@@ -97,9 +77,8 @@ export default function ThreeCard({
         <span className="font-medium">{badgeLabel}</span>
       </div>
 
-      {/* Tag góc trái dưới */}
       <div
-        className="absolute bottom-4 left-4 text-xs"
+        className="absolute bottom-6 left-6 text-xs text-emerald-600"
         style={{
           background: "rgba(255,255,255,.9)",
           backdropFilter: "blur(8px)",

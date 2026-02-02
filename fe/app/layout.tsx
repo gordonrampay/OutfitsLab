@@ -25,7 +25,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="vi">
       <body
-        className="antialiased text-slate-800 mx-auto"
+        className="antialiased text-slate-800 "
         style={{
           background: `radial-gradient(1200px 600px at 10% 10%, #fff6ea 0%, transparent 60%),
                        radial-gradient(900px 500px at 90% 20%, #e9fff8 0%, transparent 60%),
