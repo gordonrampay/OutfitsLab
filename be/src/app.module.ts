@@ -8,6 +8,7 @@ require('dotenv').config();
 
 const password = process.env.DB_PASSWORD || '';
 
+
 @Module({
   imports: [
     TypeOrmModule.forRoot({
@@ -20,6 +21,8 @@ const password = process.env.DB_PASSWORD || '';
       autoLoadEntities: true,
       synchronize: true,
     }),
+    AuthModule,  
+    UsersModule,
   ],
 })
 export class AppModule { }
