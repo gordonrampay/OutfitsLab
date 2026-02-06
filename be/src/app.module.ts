@@ -1,5 +1,10 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { UsersModule } from './modules/users/users.module'; 
+import { ShopsModule } from './modules/shops/shops.module';
+require('dotenv').config();
+
+const password = process.env.DB_PASSWORD || '';
 
 @Module({
   imports: [
@@ -8,11 +13,13 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       host: 'localhost',
       port: 5432,
       username: 'postgres',
-      password: '123456',
+      password: password,
       database: 'outfitslab_db',
       autoLoadEntities: true,
       synchronize: true, 
     }),
+    UsersModule,
+    ShopsModule,
   ],
 })
 export class AppModule {}
