@@ -5,23 +5,17 @@ export class User {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column()   
-  email : string;
+  @Column({ unique: true })
+  email: string;
 
-  @Column()
+  @Column({ nullable: true })
   displayName: string;
 
-  @Column({ unique: true })
-  avatarUrl: string;
+  @Column({ select: false }) // Password sẽ không bị lộ khi dùng lệnh find() thông thường
+  password: string;
 
-  @Column({select:false})
-  password : string;
-
-   @Column()
-   bio : string;
-
-    @Column()
-    isActive : boolean;
+  @Column({ default: true })
+  isActive: boolean;
 
   @Column({ default: 'user' })
   role: 'user' | 'admin' | 'shop';
