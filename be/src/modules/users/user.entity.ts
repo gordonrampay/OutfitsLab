@@ -1,4 +1,4 @@
-import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn } from 'typeorm';
+import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, OneToMany, UpdateDateColumn } from 'typeorm';
 
 @Entity('users')
 export class User {
@@ -11,21 +11,25 @@ export class User {
   @Column()
   displayName: string;
 
-  @Column({ unique: true })
+  @Column({ unique: true , nullable : true })
   avatarUrl: string;
 
   @Column({select:false})
   password : string;
 
-   @Column()
-   bio : string;
+  @Column({nullable : true})
+  bio : string;
 
-    @Column()
-    isActive : boolean;
+  @Column({default : 1})
+  isActive : boolean;
 
   @Column({ default: 'user' })
   role: 'user' | 'admin' | 'shop';
 
   @CreateDateColumn()
   createdAt: Date;
+
+  @UpdateDateColumn()
+  updatedAt: Date;
+  
 }
